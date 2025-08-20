@@ -83,6 +83,17 @@
                             class="transition-colors pb-1">
                         📋 Fiches
                     </button>
+                    <button @click="startPremiumQuiz()" 
+                            :class="currentView === 'premiumQuiz' || currentView === 'quizResults' ? 'text-orange-600 border-b-2 border-orange-600' : 'text-gray-600 hover:text-orange-600'"
+                            class="transition-colors pb-1 relative">
+                        👑 Quiz Premium
+                        <template x-if="!isPremium">
+                            <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-2 h-2"></span>
+                        </template>
+                        <template x-if="isPremium">
+                            <span class="absolute -top-1 -right-1 bg-green-500 text-white text-xs rounded-full w-2 h-2"></span>
+                        </template>
+                    </button>
                     <button @click="goToProgress()" 
                             :class="currentView === 'progress' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-blue-600'"
                             class="transition-colors pb-1">
@@ -113,6 +124,12 @@
                             :class="currentView === 'cards' ? 'text-blue-600 bg-blue-50' : 'text-gray-600'"
                             class="p-3 rounded-lg text-left transition-colors">
                         📋 Fiches
+                    </button>
+                    <button @click="startPremiumQuiz(); mobileMenuOpen = false" 
+                            :class="currentView === 'premiumQuiz' || currentView === 'quizResults' ? 'text-orange-600 bg-orange-50' : 'text-gray-600'"
+                            class="p-3 rounded-lg text-left transition-colors relative">
+                        👑 Quiz Premium
+                        <span x-show="!isPremium" class="absolute top-1 right-3 bg-red-500 text-white text-xs rounded-full w-2 h-2"></span>
                     </button>
                     <button @click="goToProgress(); mobileMenuOpen = false" 
                             :class="currentView === 'progress' ? 'text-blue-600 bg-blue-50' : 'text-gray-600'"
@@ -151,6 +168,85 @@
                             class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg hover:border-blue-500 hover:text-blue-600 transition-colors">
                         📊 Voir mes progrès
                     </button>
+                </div>
+            </section>
+
+            <!-- Section Premium Quiz -->
+            <section class="mb-16">
+                <div class="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 rounded-2xl p-8 text-white relative overflow-hidden">
+                    <!-- Effet de brillance -->
+                    <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 translate-x-full animate-pulse"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="flex items-center justify-center mb-4">
+                            <span class="text-4xl mr-2">👑</span>
+                            <h3 class="text-3xl font-bold">PREMIUM QUIZ</h3>
+                            <span class="text-4xl ml-2">👑</span>
+                        </div>
+                        
+                        <p class="text-xl text-center mb-6">
+                            Quiz chronométré de 30 questions avec note et conseils personnalisés
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                            <div class="text-center">
+                                <div class="text-3xl mb-2">⏱️</div>
+                                <h4 class="font-semibold mb-1">30 secondes</h4>
+                                <p class="text-sm opacity-90">par question</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl mb-2">📊</div>
+                                <h4 class="font-semibold mb-1">Note finale</h4>
+                                <p class="text-sm opacity-90">avec analyse</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl mb-2">🎯</div>
+                                <h4 class="font-semibold mb-1">Conseils</h4>
+                                <p class="text-sm opacity-90">personnalisés</p>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <template x-if="!isPremium">
+                                <div>
+                                    <!-- Statut d'accès pour utilisateurs gratuits -->
+                                    <div class="mb-4 p-3 bg-blue-100 rounded-lg">
+                                        <span class="text-blue-800 font-semibold" x-text="getQuizAccessStatus().message"></span>
+                                    </div>
+                                    
+                                    <template x-if="getQuizAccessStatus().canUse">
+                                        <button @click="startPremiumQuiz()" 
+                                                class="bg-white text-orange-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors mr-4 transform hover:scale-105">
+                                            🎯 Essayer le Quiz Premium
+                                        </button>
+                                    </template>
+                                    
+                                    <template x-if="!getQuizAccessStatus().canUse">
+                                        <button @click="showSubscription = true" 
+                                                class="bg-white text-orange-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors mr-4 transform hover:scale-105">
+                                            🚀 Débloquer l'accès illimité
+                                        </button>
+                                    </template>
+                                    
+                                    <p class="text-sm mt-4 opacity-90">Soyez notifié du lancement • Tarif préférentiel pour les premiers</p>
+                                </div>
+                            </template>
+                            <template x-if="isPremium">
+                                <div>
+                                    <!-- Statut pour utilisateurs premium -->
+                                    <div class="mb-4 p-3 bg-green-100 rounded-lg">
+                                        <span class="text-green-800 font-semibold">👑 Premium actif</span>
+                                        <span class="text-green-600 text-sm block" x-text="getDaysRemaining() + ' jours restants'"></span>
+                                    </div>
+                                    
+                                    <button @click="startPremiumQuiz()" 
+                                            class="bg-white text-orange-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors transform hover:scale-105">
+                                        🎯 Commencer le Quiz Premium
+                                    </button>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -249,19 +345,28 @@
                     </div>
                     
                     <!-- Réponse -->
-                    <div class="p-8" x-show="showAnswer" x-transition>
+                    <div class="p-8">
                         <h3 class="text-xl font-semibold text-green-700 mb-4">Réponse :</h3>
-                        <p class="text-lg text-gray-800 leading-relaxed" x-text="getCurrentCard()?.explanation"></p>
-                    </div>
-                    
-                    <!-- Actions de la fiche -->
-                    <div class="p-6 bg-gray-50 border-t border-gray-200">
-                        <div class="flex justify-center">
-                            <button @click="toggleAnswer()" 
-                                    class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                                <span x-show="!showAnswer">👁️ Voir la réponse</span>
-                                <span x-show="showAnswer">🙈 Masquer la réponse</span>
-                            </button>
+                        <div class="space-y-4">
+                            <!-- Réponse principale -->
+                            <template x-if="Array.isArray(getCurrentCard()?.reponse)">
+                                <div class="space-y-2">
+                                    <template x-for="point in getCurrentCard()?.reponse" :key="point">
+                                        <p class="text-gray-800 leading-relaxed" x-text="point"></p>
+                                    </template>
+                                </div>
+                            </template>
+                            <template x-if="!Array.isArray(getCurrentCard()?.reponse)">
+                                <p class="text-gray-800 leading-relaxed" x-text="getCurrentCard()?.reponse"></p>
+                            </template>
+                            
+                            <!-- Conseils -->
+                            <template x-if="getCurrentCard()?.conseils">
+                                <div class="mt-6 p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg">
+                                    <h4 class="text-lg font-semibold text-blue-800 mb-2">💡 Conseils :</h4>
+                                    <p class="text-blue-700 leading-relaxed" x-text="getCurrentCard()?.conseils"></p>
+                                </div>
+                            </template>
                         </div>
                     </div>
                 </div>
@@ -344,6 +449,246 @@
                             </div>
                         </div>
                     </template>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page Quiz Premium -->
+        <div x-show="currentView === 'premiumQuiz'" x-transition class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- En-tête Quiz Premium -->
+            <div class="mb-8">
+                <div class="flex justify-between items-center mb-4">
+                    <button @click="goToHome()" class="flex items-center text-blue-600 hover:text-blue-700 transition-colors">
+                        ← Retour à l'accueil
+                    </button>
+                    <div class="flex items-center space-x-4">
+                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">
+                            👑 Premium Quiz
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Barre de progression et timer -->
+                <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm mb-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-semibold">Question <span x-text="quizProgress.current"></span> / <span x-text="quizProgress.total"></span></h3>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-2xl">⏱️</span>
+                            <span class="text-2xl font-bold" :class="timeLeft <= 10 ? 'text-red-600' : 'text-blue-600'" x-text="timeLeft"></span>
+                            <span class="text-gray-600">s</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Barre de progression -->
+                    <div class="w-full bg-gray-200 rounded-full h-3 mb-4">
+                        <div class="bg-gradient-to-r from-blue-600 to-orange-600 h-3 rounded-full transition-all duration-300" 
+                             :style="`width: ${(quizProgress.current / quizProgress.total) * 100}%`"></div>
+                    </div>
+                    
+                    <!-- Timer circulaire -->
+                    <div class="flex justify-center">
+                        <div class="relative w-20 h-20">
+                            <svg class="transform -rotate-90 w-20 h-20">
+                                <circle cx="40" cy="40" r="30" stroke="currentColor" stroke-width="6" fill="transparent" class="text-gray-200"/>
+                                <circle cx="40" cy="40" r="30" stroke="currentColor" stroke-width="6" fill="transparent" 
+                                        :class="timeLeft <= 10 ? 'text-red-500' : 'text-blue-500'"
+                                        :stroke-dasharray="`${2 * Math.PI * 30}`"
+                                        :stroke-dashoffset="`${2 * Math.PI * 30 * (1 - timeLeft / 30)}`"
+                                        class="transition-all duration-1000 ease-linear"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question Quiz -->
+            <div x-show="getCurrentQuizQuestion()" class="mb-8">
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+                    <!-- Question -->
+                    <div class="p-8 bg-gradient-to-r from-orange-50 to-yellow-50">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Question :</h3>
+                        <p class="text-lg text-gray-800 leading-relaxed" x-text="getCurrentQuizQuestion()?.question"></p>
+                    </div>
+                    
+                    <!-- Options de réponse -->
+                    <div class="p-8" x-show="getCurrentQuizQuestion()?.quiz_options">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-4">Choisissez votre réponse :</h3>
+                        <div class="space-y-3">
+                            <template x-for="option in getCurrentQuizQuestion()?.quiz_options" :key="option.option">
+                                <button @click="selectQuizAnswer(option.option)" 
+                                        :class="selectedAnswer === option.option ? 'bg-blue-100 border-blue-500 text-blue-800' : 'bg-gray-50 border-gray-200 hover:bg-gray-100'"
+                                        class="w-full p-4 text-left border-2 rounded-lg transition-colors">
+                                    <span class="font-semibold mr-3" x-text="option.option + '.'"></span>
+                                    <span x-text="option.text"></span>
+                                </button>
+                            </template>
+                        </div>
+                        
+                        <div class="mt-6 text-center">
+                            <button @click="submitQuizAnswer()" 
+                                    :disabled="!selectedAnswer"
+                                    :class="!selectedAnswer ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-700'"
+                                    class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                                Valider la réponse
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page Résultats Quiz -->
+        <div x-show="currentView === 'quizResults'" x-transition class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="text-center mb-8">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">🎯 Résultats du Quiz Premium</h2>
+                <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg">
+                    <!-- Score -->
+                    <div class="mb-6">
+                        <div class="text-6xl font-bold mb-2" :class="quizResults.score >= 80 ? 'text-green-600' : quizResults.score >= 60 ? 'text-orange-600' : 'text-red-600'" 
+                             x-text="quizResults.score + '%'"></div>
+                        <p class="text-xl text-gray-600">
+                            <span x-text="quizResults.correct"></span> / <span x-text="quizResults.total"></span> bonnes réponses
+                        </p>
+                    </div>
+                    
+                    <!-- Badge de performance -->
+                    <div class="mb-6">
+                        <template x-if="quizResults.score >= 80">
+                            <div class="bg-green-100 text-green-800 px-4 py-2 rounded-full text-lg font-semibold">
+                                🏆 Excellent ! Vous êtes prêt(e) pour l'entretien
+                            </div>
+                        </template>
+                        <template x-if="quizResults.score >= 60 && quizResults.score < 80">
+                            <div class="bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-lg font-semibold">
+                                📚 Bien ! Continuez à réviser certains points
+                            </div>
+                        </template>
+                        <template x-if="quizResults.score < 60">
+                            <div class="bg-red-100 text-red-800 px-4 py-2 rounded-full text-lg font-semibold">
+                                💪 Il faut encore réviser, mais vous progressez !
+                            </div>
+                        </template>
+                    </div>
+                    
+                    <!-- Conseils personnalisés -->
+                    <div class="text-left bg-blue-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-blue-800 mb-4">💡 Conseils personnalisés :</h3>
+                        <div class="space-y-3">
+                            <template x-for="conseil in quizResults.conseils" :key="conseil">
+                                <p class="text-blue-700" x-text="conseil"></p>
+                            </template>
+                        </div>
+                    </div>
+                    
+                    <!-- Actions -->
+                    <div class="mt-8 space-x-4">
+                        <template x-if="isPremium">
+                            <button @click="startPremiumQuiz()" 
+                                    class="bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
+                                🔄 Refaire le quiz
+                            </button>
+                        </template>
+                        <template x-if="!isPremium && getQuizAccessStatus().canUse">
+                            <button @click="startPremiumQuiz()" 
+                                    class="bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
+                                🔄 Utiliser ma dernière démo
+                            </button>
+                        </template>
+                        <template x-if="!isPremium && !getQuizAccessStatus().canUse">
+                            <button @click="showSubscription = true" 
+                                    class="bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
+                                🚀 S'abonner pour plus de quiz
+                            </button>
+                        </template>
+                        
+                        <button @click="goToCards(); selectCategory('all')" 
+                                class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                            📚 Réviser les fiches
+                        </button>
+                        <button @click="goToHome()" 
+                                class="border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:border-blue-500 hover:text-blue-600 transition-colors">
+                            🏠 Accueil
+                        </button>
+                    </div>
+                    
+                    <!-- Message d'accès pour utilisateurs gratuits -->
+                    <template x-if="!isPremium">
+                        <div class="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                            <p class="text-blue-800 font-semibold mb-2">🎯 Vous avez utilisé votre quiz démo !</p>
+                            <p class="text-blue-700 text-sm">
+                                Abonnez-vous pour un accès illimité au Quiz Premium, des analyses détaillées et des conseils personnalisés.
+                            </p>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal d'abonnement -->
+        <div x-show="showSubscription" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" 
+             x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+             class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+            <div @click.away="showSubscription = false" 
+                 class="bg-white rounded-2xl p-8 max-w-md w-full max-h-screen overflow-y-auto">
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">👑 Pré-inscription Premium</h3>
+                    <div class="bg-gradient-to-r from-orange-500 to-red-500 text-white p-6 rounded-lg mb-6">
+                        <div class="text-3xl font-bold mb-2">9,99€</div>
+                        <div class="text-lg">par mois</div>
+                        <div class="text-sm mt-2 opacity-90">🎉 Tarif de lancement</div>
+                    </div>
+                    
+                    <div class="text-left space-y-3 mb-6">
+                        <div class="flex items-center">
+                            <span class="text-green-600 mr-2">✓</span>
+                            <span>Quiz chronométré de 30 questions</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-green-600 mr-2">✓</span>
+                            <span>Note détaillée et analyse</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-green-600 mr-2">✓</span>
+                            <span>Conseils personnalisés</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-green-600 mr-2">✓</span>
+                            <span>Statistiques avancées</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-green-600 mr-2">✓</span>
+                            <span>Nouvelles fonctionnalités</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Formulaire d'email -->
+                    <div class="mb-6">
+                        <input x-model="preRegisterEmail" 
+                               type="email" 
+                               placeholder="Votre email pour être notifié"
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors">
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <button @click="submitPreRegistration()" 
+                                :disabled="!preRegisterEmail"
+                                :class="!preRegisterEmail ? 'opacity-50 cursor-not-allowed' : 'hover:shadow-lg'"
+                                class="w-full bg-gradient-to-r from-orange-600 to-red-600 text-white py-3 rounded-lg font-semibold transition-all">
+                            🚀 Me notifier du lancement
+                        </button>
+                        <button @click="activatePremium()" 
+                                class="w-full border-2 border-orange-500 text-orange-600 py-2 rounded-lg font-semibold hover:bg-orange-50 transition-colors text-sm">
+                            Activer le mode démo (gratuit)
+                        </button>
+                        <button @click="showSubscription = false" 
+                                class="w-full border border-gray-300 text-gray-700 py-2 rounded-lg font-semibold hover:bg-gray-50 transition-colors text-sm">
+                            Annuler
+                        </button>
+                    </div>
+                    
+                    <p class="text-xs text-gray-500 mt-4">
+                        🔒 Aucun spam • Désinscription facile • Lancement prévu sous 2 semaines
+                    </p>
                 </div>
             </div>
         </div>

@@ -29,10 +29,13 @@ function loadQuestions() {
     const jsonData = JSON.parse(data);
     
     // Transformer les questions du format entretien vers le format fiches
-    allQuestions = jsonData.entretien.map((q, index) => ({
+    allQuestions = jsonData.entretien_naturalisation.map((q, index) => ({
       id: q.id || (index + 1),
       question: q.question,
-      explanation: q.reponse,
+      reponse: q.reponse, // Garder le champ reponse original
+      explanation: q.reponse, // Pour compatibilité
+      conseils: q.conseils, // Garder les conseils
+      quiz_options: q.quiz_options, // Garder les options de quiz
       category: q.category || 'general',
       difficulty: q.difficulty || 'moyen',
       // Créer des options de réponse basées sur la question (pour compatibilité)
