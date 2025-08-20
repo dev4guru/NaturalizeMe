@@ -1,0 +1,25 @@
+{
+  "name": "naturalize-me",
+  "version": "1.0.0",
+  "description": "Plateforme de préparation aux 200 questions de naturalisation française",
+  "main": "backend/server-simple.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:full": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "build:all": "npm run build && cd backend && npm run build",
+    "start": "cd backend && npm start",
+    "test": "cd backend && npm test",
+    "test:all": "cd backend && npm test && cd ../frontend && npm test",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "seed": "cd backend && npm run seed"
+  },
+  "keywords": ["naturalisation", "quiz", "france", "citizenship", "education"],
+  "author": "NaturalizeMe Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

@@ -1,0 +1,31 @@
+<!-- Simple placeholder icon SVG that can be converted to PNG -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="144" height="144" fill="url(#grad)" rx="20"/>
+  
+  <!-- French flag representation -->
+  <rect x="30" y="40" width="12" height="64" fill="#0055A4"/>
+  <rect x="44" y="40" width="12" height="64" fill="#FFFFFF"/>
+  <rect x="58" y="40" width="12" height="64" fill="#EF4135"/>
+  
+  <!-- Quiz/Book icon -->
+  <rect x="80" y="45" width="40" height="54" fill="#ffffff" rx="4"/>
+  <rect x="85" y="52" width="30" height="4" fill="#667eea"/>
+  <rect x="85" y="60" width="24" height="3" fill="#999"/>
+  <rect x="85" y="68" width="28" height="3" fill="#999"/>
+  <rect x="85" y="76" width="20" height="3" fill="#999"/>
+  <rect x="85" y="84" width="26" height="3" fill="#999"/>
+  
+  <!-- Check mark -->
+  <path d="M 87 90 L 93 96 L 108 81" stroke="#00C851" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Text "FR" -->
+  <text x="100" y="130" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">FR</text>
+</svg>

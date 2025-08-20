@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NaturalizeMe - Fiches de Révision</title>
+    <meta name="description" content="Préparez-vous à l'entretien de naturalisation française avec nos 200 fiches de révision">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+    
+    <!-- SEO -->
+    <meta property="og:title" content="NaturalizeMe - Fiches de Révision">
+    <meta property="og:description" content="200 fiches pour préparer votre entretien de naturalisation française">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://naturalizeme.fr">
+    
+    <!-- Preload -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <!-- Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.3s ease-out',
+                        'flip': 'flip 0.6s ease-in-out',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Application Scripts -->
+    <script src="/js/app-fiches.js"></script>
+    
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-red-50 font-inter" x-data="app">
+    
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50 shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" x-data="{ mobileMenuOpen: false }">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-red-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">N</span>
+                    </div>
+                    <h1 class="text-xl font-bold bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent">
+                        NaturalizeMe
+                    </h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <button @click="goToHome()" 
+                            :class="currentView === 'home' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-blue-600'"
+                            class="transition-colors pb-1">
+                        🏠 Accueil
+                    </button>
+                    <button @click="goToCards()" 
+                            :class="currentView === 'cards' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-blue-600'"
+                            class="transition-colors pb-1">
+                        📋 Fiches
+                    </button>
+                    <button @click="goToProgress()" 
+                            :class="currentView === 'progress' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-blue-600'"
+                            class="transition-colors pb-1">
+                        📊 Progrès
+                    </button>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path x-show="mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div x-show="mobileMenuOpen" x-transition class="md:hidden py-4 border-t border-gray-200">
+                <div class="flex flex-col space-y-2">
+                    <button @click="goToHome(); mobileMenuOpen = false" 
+                            :class="currentView === 'home' ? 'text-blue-600 bg-blue-50' : 'text-gray-600'"
+                            class="p-3 rounded-lg text-left transition-colors">
+                        🏠 Accueil
+                    </button>
+                    <button @click="goToCards(); mobileMenuOpen = false" 
+                            :class="currentView === 'cards' ? 'text-blue-600 bg-blue-50' : 'text-gray-600'"
+                            class="p-3 rounded-lg text-left transition-colors">
+                        📋 Fiches
+                    </button>
+                    <button @click="goToProgress(); mobileMenuOpen = false" 
+                            :class="currentView === 'progress' ? 'text-blue-600 bg-blue-50' : 'text-gray-600'"
+                            class="p-3 rounded-lg text-left transition-colors">
+                        📊 Progrès
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20 min-h-screen">
+
+        <!-- Page d'Accueil -->
+        <div x-show="currentView === 'home'" x-transition class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- Hero Section -->
+            <section class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                    Révisez les
+                    <span class="bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent">
+                        200 questions
+                    </span>
+                    de naturalisation
+                </h2>
+                <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                    Préparez-vous efficacement à l'entretien de naturalisation française avec nos fiches de révision complètes et interactives.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button @click="startStudying()" 
+                            class="bg-gradient-to-r from-blue-600 to-red-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200">
+                        📚 Commencer les révisions
+                    </button>
+                    <button @click="goToProgress()" 
+                            class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg hover:border-blue-500 hover:text-blue-600 transition-colors">
+                        📊 Voir mes progrès
+                    </button>
+                </div>
+            </section>
+
+            <!-- Statistiques -->
+            <section class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
+                <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 text-center border border-gray-200/50 shadow-sm">
+                    <div class="text-3xl font-bold text-blue-600 mb-2" x-text="stats.totalQuestions"></div>
+                    <p class="text-gray-600">Questions disponibles</p>
+                </div>
+                <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 text-center border border-gray-200/50 shadow-sm">
+                    <div class="text-3xl font-bold text-green-600 mb-2" x-text="stats.categoriesCount"></div>
+                    <p class="text-gray-600">Catégories</p>
+                </div>
+                <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 text-center border border-gray-200/50 shadow-sm">
+                    <div class="text-3xl font-bold text-purple-600 mb-2" x-text="userProgress.cardsViewed"></div>
+                    <p class="text-gray-600">Fiches vues</p>
+                </div>
+                <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 text-center border border-gray-200/50 shadow-sm">
+                    <div class="text-3xl font-bold text-orange-600 mb-2" x-text="userProgress.studiedToday"></div>
+                    <p class="text-gray-600">Sessions aujourd'hui</p>
+                </div>
+            </section>
+
+            <!-- Catégories -->
+            <section class="mb-16">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Choisissez votre catégorie</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <template x-for="category in categories.filter(c => c.id !== 'all')" :key="category.id">
+                        <button @click="selectCategory(category.id); startStudying()" 
+                                class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 text-center border border-gray-200/50 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-200 group">
+                            <div class="text-4xl mb-4 group-hover:scale-110 transition-transform" x-text="category.icon"></div>
+                            <h4 class="font-semibold text-gray-900 mb-2" x-text="category.name"></h4>
+                            <p class="text-sm text-gray-600">
+                                <span x-text="category.count"></span> questions
+                            </p>
+                        </button>
+                    </template>
+                </div>
+            </section>
+        </div>
+
+        <!-- Page des Fiches -->
+        <div x-show="currentView === 'cards'" x-transition class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            
+            <!-- En-tête des fiches -->
+            <div class="mb-8">
+                <div class="flex justify-between items-center mb-4">
+                    <button @click="goToHome()" class="flex items-center text-blue-600 hover:text-blue-700 transition-colors">
+                        ← Retour à l'accueil
+                    </button>
+                    <div class="text-sm text-gray-600">
+                        <span x-text="formatCardNumber()"></span>
+                    </div>
+                </div>
+                
+                <!-- Sélecteur de catégorie -->
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <template x-for="category in categories" :key="category.id">
+                        <button @click="selectCategory(category.id)"
+                                :class="selectedCategory === category.id ? 'bg-blue-600 text-white' : 'bg-white text-gray-700 hover:bg-gray-50'"
+                                class="px-4 py-2 rounded-lg border transition-colors">
+                            <span x-text="category.icon"></span>
+                            <span x-text="category.name"></span>
+                            <span class="text-xs opacity-75">(<span x-text="category.count"></span>)</span>
+                        </button>
+                    </template>
+                </div>
+
+                <!-- Actions -->
+                <div class="flex justify-between items-center">
+                    <button @click="shuffleCards()" class="flex items-center space-x-2 text-gray-600 hover:text-gray-800 transition-colors">
+                        🔀 <span>Mélanger</span>
+                    </button>
+                    <button @click="toggleFavorite()" 
+                            :class="isFavorite() ? 'text-red-500' : 'text-gray-400'"
+                            class="flex items-center space-x-2 hover:text-red-500 transition-colors">
+                        <span x-text="isFavorite() ? '❤️' : '🤍'"></span>
+                        <span x-text="isFavorite() ? 'Favori' : 'Ajouter aux favoris'"></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Fiche -->
+            <div x-show="getCurrentCard()" class="mb-8">
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+                    <!-- Question -->
+                    <div class="p-8 bg-gradient-to-r from-blue-50 to-red-50">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+                                  x-text="formatCategoryName(getCurrentCard()?.category)">
+                            </span>
+                            <span class="text-gray-500 text-sm" x-text="formatCardNumber()"></span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Question :</h3>
+                        <p class="text-lg text-gray-800 leading-relaxed" x-text="getCurrentCard()?.question"></p>
+                    </div>
+                    
+                    <!-- Réponse -->
+                    <div class="p-8" x-show="showAnswer" x-transition>
+                        <h3 class="text-xl font-semibold text-green-700 mb-4">Réponse :</h3>
+                        <p class="text-lg text-gray-800 leading-relaxed" x-text="getCurrentCard()?.explanation"></p>
+                    </div>
+                    
+                    <!-- Actions de la fiche -->
+                    <div class="p-6 bg-gray-50 border-t border-gray-200">
+                        <div class="flex justify-center">
+                            <button @click="toggleAnswer()" 
+                                    class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                                <span x-show="!showAnswer">👁️ Voir la réponse</span>
+                                <span x-show="showAnswer">🙈 Masquer la réponse</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="flex justify-between items-center">
+                <button @click="previousCard()" 
+                        :disabled="isFirstCard()"
+                        :class="isFirstCard() ? 'opacity-50 cursor-not-allowed' : 'hover:bg-gray-100'"
+                        class="flex items-center space-x-2 px-6 py-3 rounded-lg border border-gray-300 transition-colors">
+                    ← <span>Précédent</span>
+                </button>
+                
+                <div class="text-gray-600">
+                    <span x-text="getCurrentCategory().icon"></span>
+                    <span x-text="getCurrentCategory().name"></span>
+                </div>
+                
+                <button @click="nextCard()" 
+                        :disabled="isLastCard()"
+                        :class="isLastCard() ? 'opacity-50 cursor-not-allowed' : 'hover:bg-gray-100'"
+                        class="flex items-center space-x-2 px-6 py-3 rounded-lg border border-gray-300 transition-colors">
+                    <span>Suivant</span> →
+                </button>
+            </div>
+
+            <!-- Message si pas de fiches -->
+            <div x-show="!getCurrentCard() && !isLoading" class="text-center py-16">
+                <p class="text-gray-500 text-lg">Aucune fiche disponible dans cette catégorie.</p>
+                <button @click="selectCategory('all')" class="mt-4 text-blue-600 hover:text-blue-700">
+                    Voir toutes les fiches
+                </button>
+            </div>
+
+            <!-- Loading -->
+            <div x-show="isLoading" class="text-center py-16">
+                <div class="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto"></div>
+                <p class="text-gray-500 mt-4">Chargement des fiches...</p>
+            </div>
+        </div>
+
+        <!-- Page des Progrès -->
+        <div x-show="currentView === 'progress'" x-transition class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="mb-8">
+                <button @click="goToHome()" class="flex items-center text-blue-600 hover:text-blue-700 transition-colors mb-4">
+                    ← Retour à l'accueil
+                </button>
+                <h2 class="text-3xl font-bold text-gray-900">Mes Progrès</h2>
+            </div>
+
+            <!-- Statistiques personnelles -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Fiches vues</h3>
+                    <p class="text-3xl font-bold text-blue-600" x-text="userProgress.cardsViewed"></p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Sessions aujourd'hui</h3>
+                    <p class="text-3xl font-bold text-green-600" x-text="userProgress.studiedToday"></p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Favoris</h3>
+                    <p class="text-3xl font-bold text-purple-600" x-text="userProgress.favoriteCards.length"></p>
+                </div>
+            </div>
+
+            <!-- Progression par catégorie -->
+            <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Répartition par catégorie</h3>
+                <div class="space-y-4">
+                    <template x-for="category in categories.filter(c => c.id !== 'all')" :key="category.id">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <span x-text="category.icon"></span>
+                                <span x-text="category.name"></span>
+                            </div>
+                            <div class="text-sm text-gray-600">
+                                <span x-text="category.count"></span> questions
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">NaturalizeMe</h3>
+                    <p class="text-gray-400">
+                        Votre compagnon pour réussir l'entretien de naturalisation française.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Liens utiles</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Service Public</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Préfecture</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Légifrance</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>support@naturalizeme.fr</li>
+                        <li>+33 1 23 45 67 89</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 NaturalizeMe. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,2159 @@
+{
+  "entretien": [
+    {
+      "id": 1,
+      "question": "Pourquoi voulez-vous devenir Français / Française ?",
+      "reponse": "La réponse à cette question peut sembler facile, mais il faut garder en tête que vous devez prouver et montrer votre implication, vous devez bien préparer la réponse à cette question car elle est très importante.",
+      "conseils": [
+        "Vous devez expliquer clairement pourquoi vous sentez que vous êtes devenu Français/Française et expliquer qu'au jour d'aujourd'hui vous vous sentez plus Français/Française que votre nationalité d'origine et montrer clairement que vous n'avez plus aucune alternative.",
+        "Vous devez citer également les valeurs de la France auxquelles vous adhérez :",
+        "En démontrant par exemple que vous avez un projet personnel ou professionnel que vous êtes entrain de construire ou que vous voudriez construire en France.",
+        "Vous devez expliquer votre mode de vie actuel (à la Française) et que vous appréciez beaucoup.",
+        "Vous devez également expliquer que vous admirez la place de la France sur le paysage mondial : La France est la 3ème économie mondiale, le leader aéronautique avec l'Allemagne, l'agroalimentaire, l'industrie du luxe etc…",
+        "Enfin vous pouvez citer le patrimoine culturel Français en citant la richesse culturelle de la France : science, Arts, littérature."
+      ],
+      "category": "motivation",
+      "difficulty": "difficile"
+    },
+    {
+      "id": 2,
+      "question": "À quelle fréquence rentrez-vous dans votre pays d'origine ?",
+      "reponse": "Attention à bien répondre à cette question en donnant si possible un chiffre exact, et surtout soyez le plus honnête possible car n'oubliez pas que l'administration a votre passeport avec tous les cachets d'entrées/Sorties du territoire Français.",
+      "conseils": [
+        "Donnez un chiffre exact si possible",
+        "Soyez le plus honnête possible",
+        "L'administration a votre passeport avec tous les cachets d'entrées/sorties"
+      ],
+      "category": "attaches",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 3,
+      "question": "Etes-vous marié(e) ? Avez-vous un(e) copain / compagne, Mari / Femme ?",
+      "reponse": "Si vous êtes célibataire et seul la réponse est évidente…. Si vous êtes marié ou pacsé répondez par oui en précisant depuis combien de temps.",
+      "conseils": [
+        "Répondez selon votre situation réelle",
+        "Si marié ou pacsé, précisez depuis combien de temps"
+      ],
+      "category": "parcours_personnel",
+      "difficulty": "facile"
+    },
+    {
+      "id": 4,
+      "question": "Votre conjoint vit-il ou vit-elle avec vous ?",
+      "reponse": "Assurez vous de répondre correctement à cette question en répondant que oui, n'oubliez pas que votre conjoint ou partenaire doit vivre avec vous et en France ! si ce n'est pas le cas il y a des chances que votre demande de naturalisation Française vous soit refusée car on vous reprochera d'avoir des attaches à l'étranger et que vous ne résidez pas en France car vous êtes uniquement domicilié(e) en France.",
+      "conseils": [
+        "Votre conjoint doit vivre avec vous en France",
+        "Attention aux attaches à l'étranger",
+        "Différence entre résidence et domiciliation"
+      ],
+      "category": "parcours_personnel",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 5,
+      "question": "Quelles sont les activités que vous effectuez avec votre conjoint / partenaire ?",
+      "reponse": "Parlez des activités sportives et culturelles, de vos sorties le weekend, de vos vacances etc…",
+      "conseils": [
+        "Activités sportives et culturelles",
+        "Sorties le weekend",
+        "Vacances ensemble"
+      ],
+      "category": "attaches",
+      "difficulty": "facile"
+    },
+    {
+      "id": 6,
+      "question": "Avez-vous des enfants ? comptez-vous en avoir prochainement ?",
+      "reponse": "Répondez selon votre situation, veillez juste à préciser que les enfants seront en France.",
+      "conseils": [
+        "Répondez selon votre situation",
+        "Précisez que les enfants seront en France"
+      ],
+      "category": "parcours_personnel",
+      "difficulty": "facile"
+    },
+    {
+      "id": 7,
+      "question": "Qui s'occupe des enfants ? qui s'occupe des tâches ménagères ?",
+      "reponse": "Ici il n'est pas juste question d'aider à faire le ménage ou d'aider à s'occuper des enfants etc… l'agent cherchera plus concrètement à voir que les taches sont distribuées à part égal et à responsabilité égale entre les parents, vous ne direz donc pas « J'aide ma femme ou j'aide mon mari » mais plutôt « Nous participons ensemble et à part égale aux taches ménagère et pour s'occuper des enfants.",
+      "conseils": [
+        "Ne pas dire 'j'aide'",
+        "Insister sur l'égalité des responsabilités",
+        "Dire 'nous participons ensemble et à part égale'"
+      ],
+      "category": "valeurs_republicaines",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 8,
+      "question": "Avez-vous vos liens personnels et familiaux en France ?",
+      "reponse": "Citez ici tous vos liens familiaux (cousins, grands-parents, parents, de vos amis, votre famille en général si vous en avez en France). L'objectif principal est de montrer que vos liens familiaux et amicaux sont solides en France et que vos liens et vos habitudes montrent votre intégration et vos liens forts en France.",
+      "conseils": [
+        "Citez tous vos liens familiaux en France",
+        "Mentionnez vos amis",
+        "Montrez vos liens solides en France",
+        "Démontrez votre intégration"
+      ],
+      "category": "attaches",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 9,
+      "question": "Quelle langue utilisez-vous au travail et à la maison ?",
+      "reponse": "J'utilise la langue Française pour tous mes échanges au travail et dans la vie de tous les jours.",
+      "conseils": [
+        "Insister sur l'usage du français",
+        "Au travail et à la maison",
+        "Dans la vie de tous les jours"
+      ],
+      "category": "langue",
+      "difficulty": "facile"
+    },
+    {
+      "id": 10,
+      "question": "Faites vous partie d'une association ? Si oui, laquelle et depuis quand ?",
+      "reponse": "Vous n'êtes pas obligé(e) de faire partie d'une association, mais si vous faites partie d'une association ou si vous avez déjà été membre d'une association il est important de le citer car ce sont des points en plus pour vos réponses aux questions entretien de naturalisation française ! (Surtout si l'association aide les personnes les plus démunis).",
+      "conseils": [
+        "Pas obligatoire mais valorisant",
+        "Points en plus si association caritative",
+        "Attention : faire des dons ≠ être membre"
+      ],
+      "category": "valeurs_republicaines",
+      "difficulty": "facile"
+    },
+    {
+      "id": 11,
+      "question": "Ou se trouve le siège de cette association ?",
+      "reponse": "Répondez le plus honnêtement possible car il y a eu une enquête sur vous.",
+      "conseils": [
+        "Répondez honnêtement",
+        "Il y a eu une enquête sur vous"
+      ],
+      "category": "valeurs_republicaines",
+      "difficulty": "facile"
+    },
+    {
+      "id": 12,
+      "question": "Pratiquez vous une religion ?",
+      "reponse": "Quelles qu'elles soient citez la ou les religions que vous pratiquez.",
+      "conseils": [
+        "Répondez honnêtement selon vos pratiques",
+        "Toutes les religions sont acceptées"
+      ],
+      "category": "parcours_personnel",
+      "difficulty": "facile"
+    },
+    {
+      "id": 13,
+      "question": "Quels sont vos loisirs ?",
+      "reponse": "Citez tous vos loisirs de tous les jours, la marche, la lecture, le foot, la natation, la musique, le cinéma etc…",
+      "conseils": [
+        "Citez vos loisirs quotidiens",
+        "Exemples : marche, lecture, sport, musique, cinéma"
+      ],
+      "category": "attaches",
+      "difficulty": "facile"
+    },
+    {
+      "id": 14,
+      "question": "Pourquoi êtes-vous venu en France la toute première fois ?",
+      "reponse": "Pour vos études, pour le travail, pour rejoindre votre famille en France, répondez selon votre cas.",
+      "conseils": [
+        "Répondez selon votre cas personnel",
+        "Exemples : études, travail, regroupement familial"
+      ],
+      "category": "parcours_personnel",
+      "difficulty": "facile"
+    },
+    {
+      "id": 15,
+      "question": "Qu'avez-vous en France que vous n'avez pas dans votre pays d'origine ?",
+      "reponse": "Ici aussi répondez selon votre cas en valorisant la France, citez par exemple la démocratie, la liberté, la culture, la science etc…",
+      "conseils": [
+        "Valorisez la France",
+        "Exemples : démocratie, liberté, culture, science",
+        "Répondez selon votre expérience personnelle"
+      ],
+      "category": "motivation",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 16,
+      "question": "Ou avez-vous appris le Français ?",
+      "reponse": "À l'école, dans mon pays d'origine, dans un centre culturel Français, cours particuliers, cours en ligne, voyage linguistique, etc…",
+      "conseils": [
+        "Exemples : école, centre culturel français, cours particuliers",
+        "Cours en ligne, voyage linguistique"
+      ],
+      "category": "langue",
+      "difficulty": "facile"
+    },
+    {
+      "id": 17,
+      "question": "Pendant combien de temps avez-vous étudier le Français ?",
+      "reponse": "2 ans, 5 ans, 10ans etc… Il faudra justifier d'un niveau suffisant de Français (niveau minimum B1) pour réussir votre entretien de naturalisation Française, si vous prenez des cours n'hésitez pas à le mentionner tout en mettant l'accent sur le fait que vous prenez des cours pour atteindre rapidement le niveau B2.",
+      "conseils": [
+        "Donnez la durée précise",
+        "Niveau minimum B1 requis",
+        "Mentionnez si vous prenez des cours",
+        "Objectif niveau B2"
+      ],
+      "category": "langue",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 18,
+      "question": "Utilisez vous la langue Française au travail ?",
+      "reponse": "Oui. Si vous n'utilisez pas le Français au travail il est important d'expliquer pourquoi et de parler d'un projet en particulier durant lequel vous avez utilisé le Français.",
+      "conseils": [
+        "Répondez oui si possible",
+        "Si non, expliquez pourquoi",
+        "Mentionnez des projets où vous avez utilisé le français"
+      ],
+      "category": "langue",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 19,
+      "question": "Parlez-vous d'autres langues ? Si oui, lesquelles ?",
+      "reponse": "Citez votre langue maternelle par exemple, ainsi que toutes les autres langues étrangères que vous connaissez en plus du Français.",
+      "conseils": [
+        "Citez votre langue maternelle",
+        "Mentionnez toutes les langues que vous connaissez"
+      ],
+      "category": "langue",
+      "difficulty": "facile"
+    },
+    {
+      "id": 20,
+      "question": "Quelle langue vous parait la plus facile ? Pourquoi ?",
+      "reponse": "Le Français, car c'est la langue que j'utilise dans la vie de tous les jours.",
+      "conseils": [
+        "Répondre : le français",
+        "Justifier par l'usage quotidien"
+      ],
+      "category": "langue",
+      "difficulty": "facile"
+    },
+    {
+      "id": 21,
+      "question": "Envoyez vous de l'argent dans votre pays d'origine ? Si oui à qui ?",
+      "reponse": "Il est préférable de ne pas envoyer de l'argent dans votre pays d'origine mais c'est le cas ce n'est pas un problème si c'est juste occasionnel.",
+      "conseils": [
+        "De préférence aussi il faut que ce soit envoyé à vos parents ou grands-parents plutôt qu'à votre femme /mari et vos enfants (qui eux doivent être avec vous en France)."
+      ],
+      "category": "attaches",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 22,
+      "question": "Avez-vous de la famille proche ou lointaine dans votre pays d'origine ? Si oui comptez-vous les faire venir en France ?",
+      "reponse": "Attention ceci est une question piège, vos oncles, cousins grands-parents etc… n'ont pas le droit de s'installer en France juste parce que vous êtes Français, donc si vous avez encore de la famille dans votre pays d'origine répondez par « Oui mais je ne compte pas les faire venir en France ».",
+      "conseils": [
+        "L'agent ne doit surtout pas comprendre que vous voulez acquérir la nationalité Française uniquement pour le passeport Français ou afin de gagner de l'argent pour vivre confortablement dans votre pays d'origine.",
+        "Vous pouvez garder vos liens avec votre pays d'origine mais il ne faut pas que ces derniers soient plus importants que vos liens qui vous rattachent à la France."
+      ],
+      "category": "attaches",
+      "difficulty": "difficile"
+    },
+    {
+      "id": 23,
+      "question": "Où passez-vous vos vacances ?",
+      "reponse": "Basez vous surtout sur les villes Française que vous avez visitées, on citera par exemple Nice, Paris, Lille, Brest, Marseille etc…",
+      "conseils": [
+        "Citez des villes françaises que vous avez visitées",
+        "Exemples : Nice, Paris, Lille, Brest, Marseille"
+      ],
+      "category": "attaches",
+      "difficulty": "facile"
+    },
+    {
+      "id": 24,
+      "question": "Quelles sont les nationalités des personnes de votre entourage ?",
+      "reponse": "Vous devez montrer que la majorité des personnes qui vous entourent sont Français et que vous n'êtes pas fan du communautarisme.",
+      "conseils": [
+        "Montrez que la majorité de votre entourage est français",
+        "Évitez de donner l'impression de communautarisme"
+      ],
+      "category": "attaches",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 25,
+      "question": "Citez les trois plus grandes villes Françaises",
+      "reponse": "Paris, Marseille et Lyon.",
+      "conseils": [
+        "Réponse : Paris, Marseille et Lyon"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 26,
+      "question": "Citez trois départements Français",
+      "reponse": "Le Haut-Rhin, le Bas-Rhin, la Haute-Garonne.",
+      "conseils": [
+        "Exemples : Le Haut-Rhin, le Bas-Rhin, la Haute-Garonne"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 27,
+      "question": "Citez trois départements d'outre-mer",
+      "reponse": "La Guadeloupe, Mayotte, la Martinique, la Guyane, la Réunion.",
+      "conseils": [
+        "Exemples : La Guadeloupe, Mayotte, la Martinique, la Guyane, la Réunion"
+      ],
+      "category": "culture",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 28,
+      "question": "Citez trois régions Françaises",
+      "reponse": "L'Ile-de-France, la Bretagne, la Normandie, la Corse, Haut de France, Auvergne Rhône-Alpes, la Provence-Alpes-Côte-D'azur, l'Occitanie etc…",
+      "conseils": [
+        "Exemples : L'Ile-de-France, la Bretagne, la Normandie, la Corse, Haut de France, Auvergne Rhône-Alpes, la Provence-Alpes-Côte-D'azur, l'Occitanie"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 29,
+      "question": "Enumérez les trois types de collectivités Françaises",
+      "reponse": "Il y a trois types de collectivités en France.",
+      "conseils": [
+        "Les communes : Il y a 36 000 communes en France.",
+        "Les régions : La France compte 12 régions en Métropole en plus de la corse (qui n'est pas une région en soi mais qui en a les compétences) ainsi que 5 régions en outre-mer.",
+        "Les Départements : La France compte 101 départements, 96 départements se trouvent en métropole et 5 en Outre-mer."
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 30,
+      "question": "Citez des fleuves Français que vous connaissez",
+      "reponse": "La Loire, le Rhône, La Seine, le Rhin, la Garonne, La Marne, La Dordogne…",
+      "conseils": [
+        "Exemples : La Loire, le Rhône, La Seine, le Rhin, la Garonne, La Marne, La Dordogne"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 31,
+      "question": "Citez des chaines de montagne en France que vous connaissez",
+      "reponse": "Le Massif central, les Alpes, les Pyrénées, les Vosges, le Jura.",
+      "conseils": [
+        "Exemples : Le Massif central, les Alpes, les Pyrénées, les Vosges, le Jura"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 32,
+      "question": "En France quel est le point culminant ?",
+      "reponse": "C'est le Mont-Blanc (avec une altitude de 4809m il se trouve entre la France et l'Italie).",
+      "conseils": [
+        "Réponse : Mont-Blanc (4809m)",
+        "Se trouve entre la France et l'Italie"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 33,
+      "question": "Quels sont les pays frontaliers ou limitrophes avec la France ?",
+      "reponse": "L'Espagne, L'Italie, la Suisse, L'Allemagne, le Luxembourg, Andorre, Monaco et la Belgique.",
+      "conseils": [
+        "8 pays : L'Espagne, L'Italie, la Suisse, L'Allemagne, le Luxembourg, Andorre, Monaco et la Belgique"
+      ],
+      "category": "culture",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 34,
+      "question": "Dans quelle région sommes-nous ?",
+      "reponse": "Donnez le nom de votre région.",
+      "conseils": [
+        "Répondez selon votre lieu de résidence"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 35,
+      "question": "Dans quel département sommes-nous ?",
+      "reponse": "Donnez le nom de votre département.",
+      "conseils": [
+        "Répondez selon votre lieu de résidence"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 36,
+      "question": "Qui est le/la maire de votre département ?",
+      "reponse": "Assurez-vous de bien connaitre le nom de votre maire ainsi que son orientation politique (parti politique) par exemple pour la ville de Paris c'est Anne Hidalgo et elle est de Gauche (PS).",
+      "conseils": [
+        "Connaître le nom de votre maire",
+        "Connaître son orientation politique",
+        "Exemple : Anne Hidalgo (Paris) - PS"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 37,
+      "question": "Citez trois rois de France",
+      "reponse": "Charlemagne, François Ier, Henri IV, Louis XVI etc…",
+      "conseils": [
+        "Exemples : Charlemagne, François Ier, Henri IV, Louis XVI"
+      ],
+      "category": "histoire",
+      "difficulty": "facile"
+    },
+    {
+      "id": 38,
+      "question": "Citez des Reines de France",
+      "reponse": "Catherine de Médicis, Aliénor d'Aquitaine, Marie-Antoinette, Anne d'Autriche etc…",
+      "conseils": [
+        "Exemples : Catherine de Médicis, Aliénor d'Aquitaine, Marie-Antoinette, Anne d'Autriche"
+      ],
+      "category": "histoire",
+      "difficulty": "facile"
+    },
+    {
+      "id": 39,
+      "question": "En Quoi et pourquoi Louis XIV (Louis 14) est-il le plus connu ?",
+      "reponse": "Louis XIV est le plus connu principalement pour la durée de son règne qui fut sans nul doute le plus longue de l'histoire France, il est aussi le symbole de la monarchie absolue (une sorte de dictature monarchique) qui a été plus tard combattue par la révolution française puis abandonnée après la victoire du peuple.",
+      "conseils": [
+        "Règne le plus long de l'histoire de France",
+        "Symbole de la monarchie absolue",
+        "Combattue par la révolution française"
+      ],
+      "category": "histoire",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 40,
+      "question": "Qui était le Roi de France durant la révolution Française ?",
+      "reponse": "C'était le Roi Louis XVI (Louis 16), Le peuple s'est révolté contre le pouvoir du roi et il a proclamé la République. La famille royale est emprisonnée. Le roi est jugé et condamné à mort car les Révolutionnaires veulent empêcher le retour de la royauté. Louis XVI fut guillotiné le 21 Janvier 1793.",
+      "conseils": [
+        "Roi Louis XVI (Louis 16)",
+        "Proclamation de la République",
+        "Guillotiné le 21 Janvier 1793"
+      ],
+      "category": "histoire",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 41,
+      "question": "À quelle date précise a eu lieu la Révolution Française ?",
+      "reponse": "La Révolution Française a commencé le 05 mai 1789 avec l'ouverture des États généraux et s'est terminée le 09 novembre 1799 avec le coup d'État du 18 brumaire de Napoléon Bonaparte.",
+      "conseils": [
+        "Début : 05 mai 1789 (États généraux)",
+        "Fin : 09 novembre 1799 (18 brumaire)"
+      ],
+      "category": "histoire",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 42,
+      "question": "Quel événement de la Révolution vous a-t-il le plus marqué ?",
+      "reponse": "Vous pouvez citer par exemple la prise de la Bastille le 14 juillet 1789, événement inaugural du début de la Révolution. Elle a eu lieu dans un contexte de crise agricole, économique et sociale, aggravée par la hausse des impôts décidée par Louis XVI.",
+      "conseils": [
+        "Exemple : prise de la Bastille (14 juillet 1789)",
+        "Contexte de crise économique et sociale",
+        "Justifier votre choix"
+      ],
+      "category": "histoire",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 43,
+      "question": "Quel évènement historique de la France vous a-t-il le plus marqué ?",
+      "reponse": "Vous pouvez citer un évènement sportif, culturel ou historique (ex. : la Coupe du Monde 1998, Mai 68, la Révolution Française…), à condition de justifier votre choix.",
+      "conseils": [
+        "Exemples : Coupe du Monde 1998, Mai 68, Révolution Française",
+        "Toujours justifier votre choix"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 44,
+      "question": "Quel était le rôle de la Bastille avant sa démolition ?",
+      "reponse": "C'était une prison d'État, où furent enfermés plusieurs célébrités comme Voltaire ou le Marquis de Sade.",
+      "conseils": [
+        "Prison d'État",
+        "Détenus célèbres : Voltaire, Marquis de Sade"
+      ],
+      "category": "histoire",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 45,
+      "question": "Quand a été adoptée la Déclaration des droits de l'homme et du citoyen ?",
+      "reponse": "Le 26 août 1789.",
+      "conseils": [
+        "Date : 26 août 1789"
+      ],
+      "category": "histoire",
+      "difficulty": "facile"
+    },
+    {
+      "id": 46,
+      "question": "Qui a instauré le Code civil en France ?",
+      "reponse": "Napoléon Bonaparte.",
+      "conseils": [
+        "Réponse : Napoléon Bonaparte"
+      ],
+      "category": "histoire",
+      "difficulty": "facile"
+    },
+    {
+      "id": 47,
+      "question": "Quelles sont les dates des deux dernières guerres mondiales ?",
+      "reponse": "Première guerre mondiale : du 28 juillet 1914 au 11 novembre 1918. Seconde guerre mondiale : du 1er septembre 1939 au 2 septembre 1945.",
+      "conseils": [
+        "1ère GM : 28 juillet 1914 - 11 novembre 1918",
+        "2ème GM : 1er septembre 1939 - 2 septembre 1945"
+      ],
+      "category": "histoire",
+      "difficulty": "facile"
+    },
+    {
+      "id": 48,
+      "question": "Connaissez-vous Jean Moulin ? Pourquoi est-il connu ?",
+      "reponse": "Jean Moulin est un symbole de la Résistance française pendant la Seconde Guerre mondiale. Envoyé par le général De Gaulle, il a coordonné les mouvements de résistance. Arrêté par la Gestapo, il est mort des suites de tortures en 1943.",
+      "conseils": [
+        "Symbole de la Résistance française",
+        "Envoyé par De Gaulle",
+        "Mort en 1943 après tortures"
+      ],
+      "category": "histoire",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 49,
+      "question": "Qui est Charles de Gaulle ?",
+      "reponse": "Militaire, résistant et homme politique, fondateur de la Ve République. Président de la République française de 1959 à 1969.",
+      "conseils": [
+        "Militaire, résistant, homme politique",
+        "Fondateur de la Ve République",
+        "Président : 1959-1969"
+      ],
+      "category": "histoire",
+      "difficulty": "facile"
+    },
+    {
+      "id": 50,
+      "question": "Citez des monuments historiques français que vous connaissez.",
+      "reponse": "La tour Eiffel, L'Arc de Triomphe, Le château de Versailles, Le château de Chambord, Le Louvre, Le pont du Gard.",
+      "conseils": [
+        "Exemples : Tour Eiffel, Arc de Triomphe, château de Versailles",
+        "Château de Chambord, Louvre, pont du Gard"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 51,
+      "question": "Quand a été instituée la Ve République ?",
+      "reponse": "Par la Constitution du 4 octobre 1958.",
+      "conseils": [
+        "Date : 4 octobre 1958"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 52,
+      "question": "Quel a été le fait marquant de la Ve République ?",
+      "reponse": "La séparation renforcée des pouvoirs exécutif, législatif et judiciaire.",
+      "conseils": [
+        "Séparation renforcée des pouvoirs",
+        "Exécutif, législatif, judiciaire"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 53,
+      "question": "Quand a eu lieu la séparation de l'Église et de l'État ?",
+      "reponse": "Le 9 décembre 1905.",
+      "conseils": [
+        "Date : 9 décembre 1905"
+      ],
+      "category": "histoire",
+      "difficulty": "facile"
+    },
+    {
+      "id": 54,
+      "question": "Quels personnages de l'histoire de France vous ont le plus marqué ?",
+      "reponse": "Exemples : Charles de Gaulle, Napoléon Bonaparte…",
+      "conseils": [
+        "Exemples : Charles de Gaulle, Napoléon Bonaparte",
+        "Justifier votre choix"
+      ],
+      "category": "histoire",
+      "difficulty": "facile"
+    },
+    {
+      "id": 55,
+      "question": "Pourquoi le 1er mai est-il férié ?",
+      "reponse": "C'est la Fête du Travail.",
+      "conseils": [
+        "Réponse : Fête du Travail"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 56,
+      "question": "Pourquoi le 11 novembre est-il férié ?",
+      "reponse": "Il commémore l'Armistice de 1918, marquant la fin de la Première Guerre mondiale.",
+      "conseils": [
+        "Armistice de 1918",
+        "Fin de la Première Guerre mondiale"
+      ],
+      "category": "histoire",
+      "difficulty": "facile"
+    },
+    {
+      "id": 57,
+      "question": "Que fête-t-on le 14 juillet ?",
+      "reponse": "La fête nationale française, en mémoire de la prise de la Bastille (1789) et surtout de la Fête de la Fédération (1790).",
+      "conseils": [
+        "Fête nationale française",
+        "Prise de la Bastille (1789)",
+        "Fête de la Fédération (1790)"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 58,
+      "question": "À quelle époque ont été bâties les cathédrales gothiques ?",
+      "reponse": "Au Moyen Âge.",
+      "conseils": [
+        "Réponse : Moyen Âge"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 59,
+      "question": "Qu'est-ce que l'hôtel de ville ?",
+      "reponse": "C'est la mairie principale d'une grande ville.",
+      "conseils": [
+        "Mairie principale d'une grande ville"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 60,
+      "question": "Avez-vous mangé des spécialités locales lors de vos voyages en France ?",
+      "reponse": "Oui. Exemple : crêpes bretonnes en Bretagne, bouillabaisse à Marseille, choucroute en Alsace, etc.",
+      "conseils": [
+        "Exemples : crêpes bretonnes, bouillabaisse marseillaise",
+        "Choucroute alsacienne"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 61,
+      "question": "Quels sont les plats typiques Français que vous connaissez ?",
+      "reponse": "La bouillabaisse, Le pot-au-feu, La quiche lorraine, Les galettes bretonnes, Le steak-tartare, L'aligot etc…",
+      "conseils": [
+        "Exemples : bouillabaisse, pot-au-feu, quiche lorraine",
+        "Galettes bretonnes, steak-tartare, aligot"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 62,
+      "question": "Citez des personnages littéraires Français célèbres",
+      "reponse": "Victor Hugo, Albert Camus, Alexandre Dumas etc…",
+      "conseils": [
+        "Exemples : Victor Hugo, Albert Camus, Alexandre Dumas"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 63,
+      "question": "Citez des peintres Français célèbres",
+      "reponse": "Cézanne, Delacroix, Monet etc…",
+      "conseils": [
+        "Exemples : Cézanne, Delacroix, Monet"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 64,
+      "question": "Citez des personnes naturalisées Français(e)",
+      "reponse": "Marie Curie, Joséphine Baker etc…",
+      "conseils": [
+        "Exemples : Marie Curie, Joséphine Baker"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 65,
+      "question": "Citez des artistes Français connus",
+      "reponse": "Berlioz, Joe Dassin, Charles Aznavour, Gustave Eiffel etc…",
+      "conseils": [
+        "Exemples : Berlioz, Joe Dassin, Charles Aznavour, Gustave Eiffel"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 66,
+      "question": "Citez des écrivains Français célèbres",
+      "reponse": "Beaumarchais, Molière, Victor Hugo etc…",
+      "conseils": [
+        "Exemples : Beaumarchais, Molière, Victor Hugo"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 67,
+      "question": "Citez des œuvres littéraires célèbres",
+      "reponse": "Notre Dame de Paris, Le malade imaginaire, Le mariage de Figaro etc…",
+      "conseils": [
+        "Exemples : Notre Dame de Paris, Le malade imaginaire",
+        "Le mariage de Figaro"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 68,
+      "question": "Qui a écrit Les Trois Mousquetaires ?",
+      "reponse": "Alexandre Dumas et Auguste Maquet.",
+      "conseils": [
+        "Réponse : Alexandre Dumas et Auguste Maquet"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 69,
+      "question": "Qui était Voltaire ?",
+      "reponse": "De son vrai nom François-Marie Arouet, Voltaire est un écrivain et philosophe Français du XVIIIème siècle.",
+      "conseils": [
+        "Vrai nom : François-Marie Arouet",
+        "Écrivain et philosophe du XVIIIème siècle"
+      ],
+      "category": "histoire",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 70,
+      "question": "À quel mouvement Voltaire appartient-il ?",
+      "reponse": "Il appartenait au mouvement de la philosophie des Lumières et il en est l'un des représentants les plus connus.",
+      "conseils": [
+        "Mouvement des Lumières",
+        "L'un des représentants les plus connus"
+      ],
+      "category": "histoire",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 71,
+      "question": "Quel grand évènement sportif Français connaissez-vous ?",
+      "reponse": "Le Tour de France (cyclisme), Roland Garros (tennis), Les 24h du Mans (course automobile), Le Marathon de Paris.",
+      "conseils": [
+        "Tour de France (cyclisme)",
+        "Roland Garros (tennis)",
+        "24h du Mans (automobile)",
+        "Marathon de Paris"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 72,
+      "question": "Avons-nous le droit en France de porter des signes religieux dans l'espace public ?",
+      "reponse": "Oui, mais pas dans les écoles, les collèges et les lycées publics.",
+      "conseils": [
+        "Oui dans l'espace public",
+        "Interdit dans les établissements scolaires publics"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 73,
+      "question": "Qu'est-ce que la loi de 2004 ?",
+      "reponse": "La loi de 2004 et plus précisément l'article L141-5-1 stipule que dans les écoles, les collèges et les lycées publics, le port de signes ou tenues par lesquels les élèves manifestent ostensiblement une appartenance religieuse est interdit.",
+      "conseils": [
+        "Article L141-5-1",
+        "Interdiction signes religieux ostensibles à l'école"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 74,
+      "question": "Connaissez-vous Brigitte Bardot ?",
+      "reponse": "Brigitte Bardot est une actrice de cinéma, chanteuse et militante pour la cause animale. Elle a plusieurs œuvres artistiques et culturelles à son actif dont les plus connues sont « Moi je joue » et « Harley Davidson ».",
+      "conseils": [
+        "Actrice, chanteuse, militante pour les animaux",
+        "Œuvres : « Moi je joue », « Harley Davidson »"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 75,
+      "question": "Citez des philosophes connus des Lumières ?",
+      "reponse": "Montesquieu, Voltaire, Diderot, Rousseau, Spinoza, Descartes etc…",
+      "conseils": [
+        "Exemples : Montesquieu, Voltaire, Diderot",
+        "Rousseau, Spinoza, Descartes"
+      ],
+      "category": "histoire",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 76,
+      "question": "Qu'est-ce que la philosophie des Lumières ?",
+      "reponse": "C'est un mouvement culturel, philosophique, littéraire et intellectuel qui émerge dans la seconde moitié du XVIIe siècle. Ses philosophes (Voltaire, Rousseau, etc.) luttaient contre l'oppression religieuse et politique, l'irrationnel, l'arbitraire, l'obscurantisme et la superstition. Ils ont contribué au renouvellement du savoir, de l'éthique et de l'esthétique de leur temps. Leurs écrits ont influencé la Déclaration d'indépendance des États-Unis et la Révolution française.",
+      "conseils": [
+        "Mouvement intellectuel XVIIe siècle",
+        "Lutte contre obscurantisme et superstition",
+        "Influence sur Révolution française"
+      ],
+      "category": "histoire",
+      "difficulty": "difficile"
+    },
+    {
+      "id": 77,
+      "question": "Connaissez-vous des sportifs Français(e)s ?",
+      "reponse": "Football : Michel Platini, Zinedine Zidane. Cyclisme : Richard Virenque. Tennis : Jo-Wilfried Tsonga, Gaël Monfils, Yannick Noah. Judo : Teddy Riner.",
+      "conseils": [
+        "Football : Platini, Zidane",
+        "Tennis : Tsonga, Monfils, Noah",
+        "Judo : Teddy Riner"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 78,
+      "question": "Citez des plats de votre région/Ville/Département",
+      "reponse": "Ici vous devez montrer que vous êtes intégré et que vous connaissez à minima un ou deux plats typiques de votre région, ville ou département. La réponse dépend donc de votre lieu de résidence.",
+      "conseils": [
+        "Répondez selon votre lieu de résidence",
+        "Montrez votre intégration locale"
+      ],
+      "category": "attaches",
+      "difficulty": "facile"
+    },
+    {
+      "id": 79,
+      "question": "En quelle année a été aboli l'esclavage en France ?",
+      "reponse": "Le 27 avril 1848.",
+      "conseils": [
+        "Date : 27 avril 1848"
+      ],
+      "category": "histoire",
+      "difficulty": "facile"
+    },
+    {
+      "id": 80,
+      "question": "L'école est-elle obligatoire en France ?",
+      "reponse": "Oui. L'instruction est gratuite et obligatoire pour tous les enfants, français et étrangers, de 3 ans à 16 ans révolus. L'âge minimum a été abaissé de 6 à 3 ans depuis 2019.",
+      "conseils": [
+        "Obligatoire de 3 à 16 ans",
+        "Gratuite pour tous (français et étrangers)",
+        "Âge abaissé de 6 à 3 ans en 2019"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 81,
+      "question": "Depuis quand l'école est-elle obligatoire en France ?",
+      "reponse": "L'instruction est obligatoire depuis le 28 mars 1882.",
+      "conseils": [
+        "Date : 28 mars 1882"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 82,
+      "question": "Qui a rendu l'école obligatoire en France ?",
+      "reponse": "C'est l'ancien maire de Paris Jules Ferry.",
+      "conseils": [
+        "Réponse : Jules Ferry"
+      ],
+      "category": "histoire",
+      "difficulty": "facile"
+    },
+    {
+      "id": 83,
+      "question": "Les femmes ont-elles le droit de vote en France ?",
+      "reponse": "Oui.",
+      "conseils": [
+        "Réponse : Oui"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 84,
+      "question": "Depuis quand les femmes ont-elles le droit de vote en France ?",
+      "reponse": "Depuis le 21 avril 1944.",
+      "conseils": [
+        "Date : 21 avril 1944"
+      ],
+      "category": "histoire",
+      "difficulty": "facile"
+    },
+    {
+      "id": 85,
+      "question": "Qui a été à l'origine du château de Versailles ?",
+      "reponse": "C'est Louis XIV (Louis 14).",
+      "conseils": [
+        "Réponse : Louis XIV (Louis 14)"
+      ],
+      "category": "histoire",
+      "difficulty": "facile"
+    },
+    {
+      "id": 86,
+      "question": "Qui a été à l'origine de l'Arc de triomphe ?",
+      "reponse": "C'est Napoléon 1er.",
+      "conseils": [
+        "Réponse : Napoléon 1er"
+      ],
+      "category": "histoire",
+      "difficulty": "facile"
+    },
+    {
+      "id": 87,
+      "question": "Quel est le monument principal en France ?",
+      "reponse": "C'est la tour Eiffel à Paris.",
+      "conseils": [
+        "Réponse : la tour Eiffel à Paris"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 88,
+      "question": "Qui a construit la tour Eiffel ?",
+      "reponse": "C'est Gustave Eiffel.",
+      "conseils": [
+        "Réponse : Gustave Eiffel"
+      ],
+      "category": "histoire",
+      "difficulty": "facile"
+    },
+    {
+      "id": 89,
+      "question": "Quand la tour Eiffel a été construite et à quel évènement ?",
+      "reponse": "En 1889 lors de l'exposition universelle de Paris.",
+      "conseils": [
+        "Année : 1889",
+        "Événement : exposition universelle de Paris"
+      ],
+      "category": "histoire",
+      "difficulty": "facile"
+    },
+    {
+      "id": 90,
+      "question": "Citez des animateurs de télévision Français que vous connaissez ?",
+      "reponse": "Christophe Dechavanne – Vincent Lagaf – Jean-Pierre Foucault, etc.",
+      "conseils": [
+        "Exemples : Christophe Dechavanne, Vincent Lagaf, Jean-Pierre Foucault"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 91,
+      "question": "Citez des chanteurs Français connus ?",
+      "reponse": "Dalida, Johnny Hallyday, Charles Aznavour, Georges Brassens, Claude François, etc.",
+      "conseils": [
+        "Exemples : Dalida, Johnny Hallyday, Charles Aznavour",
+        "Georges Brassens, Claude François"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 92,
+      "question": "Citez des journalistes Français(e)s connus ?",
+      "reponse": "Élise Lucet, Ruth Elkrief, Edwy Plenel, Yann Barthès.",
+      "conseils": [
+        "Exemples : Élise Lucet, Ruth Elkrief, Edwy Plenel, Yann Barthès"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 93,
+      "question": "Citez des acteurs/actrices Français(e)s que vous connaissez ?",
+      "reponse": "Jean Dujardin, Gérard Depardieu, Marion Cotillard, etc.",
+      "conseils": [
+        "Exemples : Jean Dujardin, Gérard Depardieu, Marion Cotillard"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 94,
+      "question": "Citez des anciennes colonies Françaises ?",
+      "reponse": "Algérie, Sénégal, Mali, Côte d'Ivoire.",
+      "conseils": [
+        "Exemples : Algérie, Sénégal, Mali, Côte d'Ivoire"
+      ],
+      "category": "histoire",
+      "difficulty": "facile"
+    },
+    {
+      "id": 95,
+      "question": "Qu'est-ce que la guerre de 100 ans ?",
+      "reponse": "C'est une guerre résultant d'un conflit entre les rois de France et les rois d'Angleterre durant le Moyen Âge. Ce conflit d'un siècle a en réalité duré 116 ans plus exactement !",
+      "conseils": [
+        "Conflit France-Angleterre au Moyen Âge",
+        "Durée réelle : 116 ans"
+      ],
+      "category": "histoire",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 96,
+      "question": "Connaissez-vous la bataille de Verdun ?",
+      "reponse": "La bataille de Verdun a eu lieu en 1916 entre l'armée française et l'armée allemande en Lorraine pendant la Première Guerre mondiale. Cette guerre a fait beaucoup de victimes chez les deux camps sans pour autant sortir un vainqueur.",
+      "conseils": [
+        "Année : 1916",
+        "Lieu : Lorraine",
+        "Première Guerre mondiale"
+      ],
+      "category": "histoire",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 97,
+      "question": "Quel était le surnom des soldats Français durant la Première Guerre mondiale ?",
+      "reponse": "On les appelait les Poilus.",
+      "conseils": [
+        "Surnom : les Poilus"
+      ],
+      "category": "histoire",
+      "difficulty": "facile"
+    },
+    {
+      "id": 98,
+      "question": "Quand a eu lieu la Première Guerre mondiale ?",
+      "reponse": "La Première Guerre mondiale a eu lieu du 28 juillet 1914 au 11 novembre 1918.",
+      "conseils": [
+        "Dates : 28 juillet 1914 - 11 novembre 1918"
+      ],
+      "category": "histoire",
+      "difficulty": "facile"
+    },
+    {
+      "id": 99,
+      "question": "Quand a eu lieu la Seconde Guerre mondiale ?",
+      "reponse": "La Seconde Guerre mondiale a eu lieu du 1er septembre 1939 au 2 septembre 1945.",
+      "conseils": [
+        "Dates : 1er septembre 1939 - 2 septembre 1945"
+      ],
+      "category": "histoire",
+      "difficulty": "facile"
+    },
+    {
+      "id": 100,
+      "question": "Qui sont les alliés durant la Première Guerre mondiale ?",
+      "reponse": "La France, l'Angleterre, la Russie et les USA (États-Unis d'Amérique).",
+      "conseils": [
+        "Alliés : France, Angleterre, Russie, USA"
+      ],
+      "category": "histoire",
+      "difficulty": "facile"
+    },
+    {
+      "id": 101,
+      "question": "Qui sont les alliés durant la seconde guerre mondiale ?",
+      "reponse": "La France, l'Angleterre, l'URSS (Union soviétique), les USA (États-Unis d'Amérique).",
+      "conseils": [
+        "Alliés : France, Angleterre, URSS, USA"
+      ],
+      "category": "histoire",
+      "difficulty": "facile"
+    },
+    {
+      "id": 102,
+      "question": "Quand a eu lieu le débarquement des alliés durant la 2nd guerre mondiale ?",
+      "reponse": "Le débarquement des alliés a eu lieu le 6 juin 1944.",
+      "conseils": [
+        "Date : 6 juin 1944"
+      ],
+      "category": "histoire",
+      "difficulty": "facile"
+    },
+    {
+      "id": 103,
+      "question": "Où a eu lieu le débarquement des alliés durant la 2nd guerre mondiale ?",
+      "reponse": "En Normandie.",
+      "conseils": [
+        "Lieu : Normandie"
+      ],
+      "category": "histoire",
+      "difficulty": "facile"
+    },
+    {
+      "id": 104,
+      "question": "Quelles sont les valeurs (ou la devise) de la République Française ?",
+      "reponse": "Liberté, Égalité, Fraternité.",
+      "conseils": [
+        "Devise : Liberté, Égalité, Fraternité"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 105,
+      "question": "Si l'on devait rajouter une valeur, quelle serait-elle selon vous ?",
+      "reponse": "La Laïcité.",
+      "conseils": [
+        "Réponse : La Laïcité"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 106,
+      "question": "Qu'est-ce que la laïcité ?",
+      "reponse": "La laïcité garantit la liberté de conscience. De celle-ci découle la liberté de manifester ses croyances ou convictions dans les limites du respect de l'ordre public. La laïcité implique la neutralité de l'État et impose l'égalité de tous devant la loi sans distinction de religion ou conviction.",
+      "conseils": [
+        "Liberté de conscience",
+        "Neutralité de l'État",
+        "Égalité sans distinction religieuse"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 107,
+      "question": "Qu'est-ce que pour vous la démocratie ?",
+      "reponse": "La démocratie représente un système politique dans lequel le peuple est souverain, c'est un régime politique dans lequel tous les citoyens participent aux décisions publiques et à la vie politique du pays.",
+      "conseils": [
+        "Souveraineté du peuple",
+        "Participation citoyenne aux décisions"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 108,
+      "question": "Quelles sont les formes de la démocratie ?",
+      "reponse": "Il y a trois formes de démocratie : la démocratie directe, participative et représentative.",
+      "conseils": [
+        "Trois formes : directe, participative, représentative"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 109,
+      "question": "Êtes-vous d'accord avec le régime démocratique ?",
+      "reponse": "Absolument !",
+      "conseils": [
+        "Réponse positive attendue"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 110,
+      "question": "Quelles formes de libertés sont garanties en démocratie ?",
+      "reponse": "La liberté de penser, la liberté de croire ou de ne pas croire, la liberté d'expression, etc.",
+      "conseils": [
+        "Liberté de penser, de croire, d'expression"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 111,
+      "question": "Pensez-vous que la liberté d'expression est absolue ?",
+      "reponse": "Non, la liberté est garantie mais elle n'est pas absolue car les libertés des uns s'arrêtent là où commencent celles des autres.",
+      "conseils": [
+        "Non, liberté limitée par celle des autres"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 112,
+      "question": "Quels sont les droits et devoirs du citoyen Français ?",
+      "reponse": "Droits : voter, circuler, s'exprimer, croire ou ne pas croire en une religion, créer des associations, disposer de leur corps, droit à la propriété. Devoirs : respecter la loi, les droits des autres citoyens et l'environnement, payer taxes et impôts, défendre la patrie si menacée.",
+      "conseils": [
+        "Droits : vote, expression, circulation, propriété",
+        "Devoirs : respecter la loi, payer impôts, défendre la patrie"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 113,
+      "question": "Quels sont les symboles de la République Française ?",
+      "reponse": "Le Drapeau tricolore, La Marseillaise, Marianne, Le bonnet phrygien, La devise « Liberté, Égalité, Fraternité », La fleur de Lys, Le 14 juillet.",
+      "conseils": [
+        "Drapeau tricolore, Marseillaise, Marianne",
+        "Bonnet phrygien, devise, 14 juillet"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 114,
+      "question": "Quelles sont les couleurs du drapeau Français ?",
+      "reponse": "Bleu, Blanc, Rouge.",
+      "conseils": [
+        "Couleurs : Bleu, Blanc, Rouge"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 115,
+      "question": "Que représentent les couleurs du drapeau Français ?",
+      "reponse": "Bleu : la couleur de Paris, Blanc : la couleur des Rois, Rouge : aussi la couleur de Paris, en référence au sang versé pour la libération du peuple.",
+      "conseils": [
+        "Bleu : couleur de Paris",
+        "Blanc : couleur des Rois",
+        "Rouge : Paris, sang versé pour la liberté"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 116,
+      "question": "Qui est Marianne ?",
+      "reponse": "Marianne est une figure symbolique de la République française. Sous l'apparence d'une femme coiffée d'un bonnet phrygien, elle représente la République française et ses valeurs contenues dans la devise : « Liberté, Égalité, Fraternité ».",
+      "conseils": [
+        "Figure symbolique de la République",
+        "Femme au bonnet phrygien",
+        "Représente les valeurs républicaines"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 117,
+      "question": "Qui est aujourd'hui le président de la République ?",
+      "reponse": "C'est Emmanuel Macron.",
+      "conseils": [
+        "Réponse : Emmanuel Macron"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 118,
+      "question": "Qui était président de la République avant lui ?",
+      "reponse": "C'était François Hollande.",
+      "conseils": [
+        "Réponse : François Hollande"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 119,
+      "question": "Qui est le Premier ministre actuel ?",
+      "reponse": "C'est François Bayrou.",
+      "conseils": [
+        "Réponse : François Bayrou"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 120,
+      "question": "Qui était Premier ministre avant lui/elle ?",
+      "reponse": "C'était Gabriel Attal.",
+      "conseils": [
+        "Réponse : Gabriel Attal"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 121,
+      "question": "Dans quelle république sommes nous ?",
+      "reponse": "Nous sommes dans la cinquième république.",
+      "conseils": [
+        "Réponse : cinquième république"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 122,
+      "question": "Quand sont les dates des précédentes républiques ?",
+      "reponse": "La première république : (1792-1804). La deuxième république : (1848 – 1852). La troisième république : (1870 – 1940). La quatrième république : (1946-1958). La cinquième république : (1958 – aujourd'hui).",
+      "conseils": [
+        "1ère : 1792-1804",
+        "2ème : 1848-1852",
+        "3ème : 1870-1940",
+        "4ème : 1946-1958",
+        "5ème : 1958-aujourd'hui"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 123,
+      "question": "Qui a instauré la cinquième république ?",
+      "reponse": "C'est le général Charles de Gaule.",
+      "conseils": [
+        "Réponse : général Charles de Gaulle"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 124,
+      "question": "Ou se trouve le siège de la présidence de la république ?",
+      "reponse": "Il se trouve à l'Elysée.",
+      "conseils": [
+        "Réponse : l'Élysée"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 125,
+      "question": "Citez dans l'ordre les présidents de la cinquième république",
+      "reponse": "Charles de Gaulle. George Pompidou. Valérie Giscard d'Estaing. François Mitterrand. Jacques Chirac. Nicolas Sarkozy. François Hollande. Emanuel Macron.",
+      "conseils": [
+        "De Gaulle, Pompidou, Giscard d'Estaing",
+        "Mitterrand, Chirac, Sarkozy",
+        "Hollande, Macron"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 126,
+      "question": "Citez trois anciens premiers ministres Français de la cinquième république",
+      "reponse": "Edouard Philippe. Manuel Valls. François Fillon.",
+      "conseils": [
+        "Exemples : Édouard Philippe, Manuel Valls, François Fillon"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 127,
+      "question": "Citez trois ministres du gouvernement actuel",
+      "reponse": "Gerald DARMANIN. Manuel VALLS. Elisabeth BORNE.",
+      "conseils": [
+        "Exemples : Gérald Darmanin, Manuel Valls, Élisabeth Borne"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 128,
+      "question": "Pour combien de temps est élu le président de la république ?",
+      "reponse": "Le président de la république est élu pour un mandant de 5 ans.",
+      "conseils": [
+        "Durée : 5 ans"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 129,
+      "question": "Par quel scrutin et pour combien de mandats peut être élu le président de la république ?",
+      "reponse": "Le mandant du président est renouvelable une seule fois pour une durée de cinq ans. Il est élu au suffrage universel direct par un scrutin à la majorité absolue à 2 tours.",
+      "conseils": [
+        "Renouvelable une fois (max 2 mandats)",
+        "Suffrage universel direct à 2 tours"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 130,
+      "question": "Qui a le droit de voter aux élections ?",
+      "reponse": "Tout citoyen Français majeur.",
+      "conseils": [
+        "Citoyen français majeur"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 131,
+      "question": "Quel est l'âge de la majorité en France ?",
+      "reponse": "18 ans.",
+      "conseils": [
+        "Âge : 18 ans"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 132,
+      "question": "Qu'est-ce que le parlement ?",
+      "reponse": "Le parlement est une assemblée élue par le peuple qui assure la représentation du peuple, elle est composée de deux (02) chambres : La chambre haute (c'est là où siègent les sénateurs). La chambre basse (c'est là où siègent les députés).",
+      "conseils": [
+        "Assemblée élue représentant le peuple",
+        "Deux chambres : haute (Sénat) et basse (Assemblée nationale)"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 133,
+      "question": "Quel est le rôle exact du parlement ?",
+      "reponse": "Le parlement en France revoit, corrige et vote les lois, il détient ce que l'on appelle le pouvoir législatif.",
+      "conseils": [
+        "Vote les lois",
+        "Détient le pouvoir législatif"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 134,
+      "question": "Citez les différentes institutions politiques en France ?",
+      "reponse": "Le pouvoir Exécutif : confié à un gouvernement composé d'un Premier ministre et des ministres, à la tête duquel se trouve un chef d'État ou de gouvernement. Le pouvoir Législatif : confié à un parlement (ou législateur), à savoir, en France, l'Assemblée nationale jointe au Sénat. Le pouvoir Judiciaire : exercé par les juges et les magistrats.",
+      "conseils": [
+        "Pouvoir exécutif : Président + gouvernement",
+        "Pouvoir législatif : Parlement (Assemblée + Sénat)",
+        "Pouvoir judiciaire : juges et magistrats"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 135,
+      "question": "Qu'est-ce que le pouvoir Exécutif et quel est son rôle ?",
+      "reponse": "Le pouvoir exécutif est le pouvoir incarné par le président de la république et par son gouvernement, son rôle est de mettre en œuvre les lois et conduire la politique nationale. À cette fin, il a le pouvoir d'édicter des règlements et il dispose de l'administration et de la force armée.",
+      "conseils": [
+        "Incarné par Président + gouvernement",
+        "Met en œuvre les lois",
+        "Conduit la politique nationale"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 136,
+      "question": "Qu'est-ce que le pouvoir législatif et quel est son rôle ?",
+      "reponse": "En France le pouvoir législatif est exercé par les deux chambres du parlement (le Sénat (Sénateurs) et l'assemblée Nationale (Députés)), il est chargé de la rédaction et de l'adoption des lois mais également du contrôle de l'exécutif.",
+      "conseils": [
+        "Exercé par Sénat + Assemblée nationale",
+        "Rédige et adopte les lois",
+        "Contrôle l'exécutif"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 137,
+      "question": "Qu'est-ce que le pouvoir judiciaire et quel est son rôle ?",
+      "reponse": "Le pouvoir judiciaire est, avec les pouvoirs exécutif et législatif, l'un des trois pouvoirs constituant l'État Français qui respecte en application de la démocratie la séparation des pouvoirs. Il est entre les mains des juges et des magistrats, il a pour rôle de contrôler l'application de la loi et sanctionne son non-respect.",
+      "conseils": [
+        "Un des trois pouvoirs de l'État",
+        "Entre les mains des juges et magistrats",
+        "Contrôle application de la loi"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 138,
+      "question": "Comment sont élus les députés ?",
+      "reponse": "Les députés sont élus au suffrage universel direct uninominal majoritaire à deux tours.",
+      "conseils": [
+        "Suffrage universel direct",
+        "Uninominal majoritaire à deux tours"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 139,
+      "question": "Pour combien d'années sont élus les députés ?",
+      "reponse": "Les députés sont élus pour une période de 5 ans.",
+      "conseils": [
+        "Durée : 5 ans"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 140,
+      "question": "Ou se trouve le siège de l'assemblée nationale ?",
+      "reponse": "Elle se trouve au palais Bourbon, c'est le nom communément donné au bâtiment qui abrite l'Assemblée nationale française, il est situé sur le quai d'Orsay.",
+      "conseils": [
+        "Palais Bourbon",
+        "Quai d'Orsay"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 141,
+      "question": "Qui est le député (ou la députée) de votre département ?",
+      "reponse": "C'est l'une des questions souvent posées durant l'entretien de naturalisation française. La réponse dépend de votre département ; renseignez-vous avant l'entretien.",
+      "conseils": [
+        "Répondez selon votre département",
+        "Se renseigner avant l'entretien"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 142,
+      "question": "Qui constitue le gouvernement ?",
+      "reponse": "Le Premier ministre, Les ministres, Les secrétaires d'État.",
+      "conseils": [
+        "Premier ministre, ministres, secrétaires d'État"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 143,
+      "question": "Qui est le président de l'Assemblée nationale ?",
+      "reponse": "Yaël Braun-Pivet depuis 2022.",
+      "conseils": [
+        "Yaël Braun-Pivet (depuis 2022)"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 144,
+      "question": "Pour combien d'années est son mandat ?",
+      "reponse": "5 ans.",
+      "conseils": [
+        "Durée : 5 ans"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 145,
+      "question": "Qu'est-ce que la chambre basse ?",
+      "reponse": "L'Assemblée nationale.",
+      "conseils": [
+        "Réponse : l'Assemblée nationale"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 146,
+      "question": "Qu'est-ce que la chambre haute ?",
+      "reponse": "Le Sénat.",
+      "conseils": [
+        "Réponse : le Sénat"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 147,
+      "question": "Qu'est-ce que le Sénat ?",
+      "reponse": "Le Sénat constitue la chambre haute du Parlement français. Il détient le pouvoir législatif avec l'Assemblée nationale et siège pour examiner les lois.",
+      "conseils": [
+        "Chambre haute du Parlement",
+        "Pouvoir législatif avec l'Assemblée",
+        "Examine les lois"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 148,
+      "question": "Comment sont élus les sénateurs ?",
+      "reponse": "Au suffrage universel indirect par un collège de « grands électeurs » (environ 150 000 : maires, conseillers généraux, etc.).",
+      "conseils": [
+        "Suffrage universel indirect",
+        "Collège de grands électeurs (150 000)",
+        "Maires, conseillers généraux"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 149,
+      "question": "Pour combien d'années sont élus les sénateurs ?",
+      "reponse": "Le Sénat est renouvelé par moitié tous les trois ans, donc la durée totale du mandat est de 6 ans.",
+      "conseils": [
+        "Mandat : 6 ans",
+        "Renouvelé par moitié tous les 3 ans"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 150,
+      "question": "Quelle est la différence entre un député et un sénateur ?",
+      "reponse": "Le sénateur examine en détail les lois, contrôle l'action du gouvernement et défend les intérêts des collectivités territoriales (communes, départements, régions), contrairement aux députés qui représentent le peuple à l'Assemblée nationale.",
+      "conseils": [
+        "Sénateur : défend collectivités territoriales",
+        "Député : représente le peuple",
+        "Sénateur examine lois en détail"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 151,
+      "question": "Constitutionnellement, qui a le pouvoir de diriger le pays en cas de décès du président de la République ?",
+      "reponse": "Le président du Sénat.",
+      "conseils": [
+        "Réponse : le président du Sénat"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 152,
+      "question": "Qui est le président actuel du Sénat ?",
+      "reponse": "Gérard Larcher.",
+      "conseils": [
+        "Réponse : Gérard Larcher"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 153,
+      "question": "Qu'est-ce que le Conseil constitutionnel ?",
+      "reponse": "Institution créée par la Constitution de 1958. Il vérifie la conformité des lois à la Constitution et veille à la régularité des élections et référendums.",
+      "conseils": [
+        "Créé par Constitution de 1958",
+        "Vérifie conformité des lois",
+        "Veille à régularité des élections"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 154,
+      "question": "Qui est le président du Conseil constitutionnel ?",
+      "reponse": "Laurent Fabius (en 2025).",
+      "conseils": [
+        "Réponse : Laurent Fabius"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 155,
+      "question": "Quelle est la dernière loi votée à l'Assemblée nationale ?",
+      "reponse": "À connaître sur l'actualité française avant l'entretien.",
+      "conseils": [
+        "Se renseigner sur l'actualité avant l'entretien"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 156,
+      "question": "Savez-vous ce qu'est la cohabitation politique ?",
+      "reponse": "C'est la coexistence institutionnelle entre un chef de l'État et un chef de gouvernement politiquement antagonistes.",
+      "conseils": [
+        "Coexistence chef d'État / chef de gouvernement",
+        "Politiquement antagonistes"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 157,
+      "question": "Citez un exemple de cohabitation politique en France ?",
+      "reponse": "Mitterrand (PS) / Chirac (RPR). Chirac (RPR) / Jospin (PS).",
+      "conseils": [
+        "Exemples : Mitterrand/Chirac, Chirac/Jospin"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 158,
+      "question": "Qui nomme les ministres ?",
+      "reponse": "Le Premier ministre.",
+      "conseils": [
+        "Réponse : le Premier ministre"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 159,
+      "question": "Qui nomme le Premier ministre ?",
+      "reponse": "Le président de la République.",
+      "conseils": [
+        "Réponse : le président de la République"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 160,
+      "question": "Où se trouvent les bureaux du Premier ministre ?",
+      "reponse": "À l'hôtel Matignon à Paris.",
+      "conseils": [
+        "Réponse : hôtel Matignon à Paris"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 161,
+      "question": "Qui est le maire de votre ville ?",
+      "reponse": "Si vous ne savez pas, cherchez sur internet.",
+      "conseils": [
+        "Se renseigner selon votre ville"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 162,
+      "question": "Qu'est-ce que les élections municipales ?",
+      "reponse": "Ce sont des élections qui permettent d'élire les membres du conseil municipal de chaque commune, appelés les conseillers municipaux. Ce sont eux ensuite qui élisent le maire et ses adjoints.",
+      "conseils": [
+        "Élisent les conseillers municipaux",
+        "Conseillers élisent ensuite le maire"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 163,
+      "question": "Quelle est l'hymne de la France ?",
+      "reponse": "C'est la Marseillaise.",
+      "conseils": [
+        "Réponse : la Marseillaise"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 164,
+      "question": "Qui a écrit la Marseillaise ?",
+      "reponse": "C'est Claude Joseph Rouget de Lisle.",
+      "conseils": [
+        "Réponse : Claude Joseph Rouget de Lisle"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 165,
+      "question": "Connaissez-vous le premier couplet de la Marseillaise ?",
+      "reponse": "Allons enfants de la Patrie, Le jour de gloire est arrivé ! Contre nous de la tyrannie, L'étendard sanglant est levé, (bis) Entendez-vous dans les campagnes, Mugir ces féroces soldats ? Ils viennent jusque dans vos bras, Égorger vos fils, vos compagnes ! Refrain : Aux armes, citoyens, Formez vos bataillons, Marchons, marchons ! Qu'un sang impur Abreuve nos sillons !",
+      "conseils": [
+        "Connaître au moins le premier couplet",
+        "Connaître le refrain"
+      ],
+      "category": "culture",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 166,
+      "question": "À quelle occasion la Marseillaise a-t-elle été écrite ?",
+      "reponse": "Dans la nuit du 25 au 26 avril 1792, à la suite de la déclaration de guerre du roi d'Autriche, elle fut composée chez le maire de Strasbourg, Dietrich. Elle s'intitulait « Chant de guerre pour l'armée du Rhin ».",
+      "conseils": [
+        "25-26 avril 1792",
+        "Déclaration de guerre du roi d'Autriche",
+        "Titre original : Chant de guerre pour l'armée du Rhin"
+      ],
+      "category": "culture",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 167,
+      "question": "Quelle est la monnaie actuelle de la France ?",
+      "reponse": "C'est l'Euro.",
+      "conseils": [
+        "Réponse : l'Euro"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 168,
+      "question": "Quelle est la devise de l'Union européenne ?",
+      "reponse": "Unie dans la diversité.",
+      "conseils": [
+        "Devise : Unie dans la diversité"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 169,
+      "question": "Connaissez-vous l'hymne de l'Union européenne ?",
+      "reponse": "C'est L'ode à la joie de Beethoven.",
+      "conseils": [
+        "Réponse : L'ode à la joie de Beethoven"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    },
+    {
+      "id": 170,
+      "question": "Combien de pays compte l'Union européenne ?",
+      "reponse": "En 2024, l'Union européenne compte 27 États membres. (Le Royaume-Uni a quitté l'Union Européenne en 2020 durant le Brexit).",
+      "conseils": [
+        "27 États membres en 2024",
+        "Royaume-Uni sorti en 2020 (Brexit)"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 171,
+      "question": "Dans quel intérêt les pays européens rejoignent-ils l'Union européenne ?",
+      "reponse": "La liberté de circuler dans l'espace Schengen. La monnaie unique et forte (l'Euro). L'union politique et financière. Le partage des valeurs démocratiques.",
+      "conseils": [
+        "Liberté de circulation (Schengen)",
+        "Monnaie unique (Euro)",
+        "Union politique et financière",
+        "Valeurs démocratiques partagées"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 172,
+      "question": "Où se trouve le siège du Parlement européen ?",
+      "reponse": "Il se trouve à Strasbourg en France.",
+      "conseils": [
+        "Réponse : Strasbourg en France"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 173,
+      "question": "Où se trouve le siège de la Commission européenne ?",
+      "reponse": "Il se trouve à Bruxelles en Belgique.",
+      "conseils": [
+        "Réponse : Bruxelles en Belgique"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 174,
+      "question": "Quel pays détient la présidence de l'Union européenne cette année ?",
+      "reponse": "La Pologne.",
+      "conseils": [
+        "Réponse : la Pologne",
+        "Se renseigner selon l'année actuelle"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 175,
+      "question": "Combien d'étoiles comporte le drapeau de l'UE ?",
+      "reponse": "Il comporte 12 étoiles disposées en cercle.",
+      "conseils": [
+        "Réponse : 12 étoiles en cercle"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 176,
+      "question": "Que symbolisent ces étoiles ?",
+      "reponse": "Elles symbolisent les idéaux d'unité, de solidarité et d'harmonie entre les peuples européens.",
+      "conseils": [
+        "Unité, solidarité, harmonie entre peuples européens"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 177,
+      "question": "Que représente la journée du 9 mai ?",
+      "reponse": "C'est la Journée de l'Europe qui représente le jour de la paix.",
+      "conseils": [
+        "Journée de l'Europe",
+        "Jour de la paix"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 178,
+      "question": "Quels sont les symboles de l'Union européenne ?",
+      "reponse": "La monnaie européenne : l'Euro, Le drapeau européen, La devise de l'Europe, L'hymne européen, La Journée de l'Europe (9 mai).",
+      "conseils": [
+        "Euro, drapeau, devise",
+        "Hymne, Journée de l'Europe (9 mai)"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 179,
+      "question": "Que connaissez-vous sur le traité de Rome et quand a-t-il eu lieu ?",
+      "reponse": "Le 25 mars 1957, l'Allemagne, la Belgique, la France, l'Italie, le Luxembourg et les Pays-Bas signent à Rome deux traités : Le premier crée la Communauté économique européenne (CEE). Le second crée la Communauté européenne de l'énergie atomique (CEEA ou Euratom).",
+      "conseils": [
+        "Date : 25 mars 1957",
+        "6 pays fondateurs",
+        "Crée CEE et Euratom"
+      ],
+      "category": "institutions",
+      "difficulty": "moyen"
+    },
+    {
+      "id": 180,
+      "question": "Qui est Jeanne d'Arc ?",
+      "reponse": "C'est une jeune paysanne française qui a conduit les troupes françaises à la libération d'une partie du territoire français durant la guerre de Cent Ans.",
+      "conseils": [
+        "Jeune paysanne française",
+        "Libération du territoire",
+        "Guerre de Cent Ans"
+      ],
+      "category": "histoire",
+      "difficulty": "facile"
+    },
+    {
+      "id": 181,
+      "question": "Qu'est-ce que la Loi Veil ?",
+      "reponse": "C'est la loi qui encadre l'interruption volontaire de grossesse (IVG) préparée par la ministre de l'époque Simone Veil et votée le 17 janvier 1975.",
+      "conseils": [
+        "Loi sur l'IVG",
+        "Simone Veil",
+        "17 janvier 1975"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 182,
+      "question": "Que pensez-vous de la loi Veil ?",
+      "reponse": "C'est une mesure importante qui garantit aux femmes le droit à la liberté de disposer de leur corps.",
+      "conseils": [
+        "Mesure importante",
+        "Liberté de disposer de son corps"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 183,
+      "question": "Que pensez-vous de la parité hommes-femmes ?",
+      "reponse": "Je pense que les femmes et les hommes sont égaux et doivent avoir les mêmes droits et obligations. En France, cette parité est garantie par l'article premier de la Constitution.",
+      "conseils": [
+        "Égalité hommes-femmes",
+        "Mêmes droits et obligations",
+        "Garantie par la Constitution"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 184,
+      "question": "Avons-nous atteint cette parité dans tous les domaines ?",
+      "reponse": "Non, pas dans tous les domaines, comme pour l'égalité des salaires où il faudra au moins 200 ans pour l'atteindre de façon générale.",
+      "conseils": [
+        "Non, pas dans tous les domaines",
+        "Exemple : égalité salariale pas atteinte"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 185,
+      "question": "Quelles seront les prochaines élections ?",
+      "reponse": "Les prochaines élections sont les élections européennes et les élections municipales, qui auront lieu en mars 2026. (Si votre entretien se passe après 2026, renseignez-vous sur internet.)",
+      "conseils": [
+        "Se renseigner selon la date actuelle",
+        "Européennes et municipales en 2026"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 186,
+      "question": "Qui décidera de vous octroyer ou non la nationalité française ?",
+      "reponse": "C'est monsieur le ministre de l'Intérieur (actuellement Bruno Retailleau).",
+      "conseils": [
+        "Le ministre de l'Intérieur",
+        "Actuellement Bruno Retailleau"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 187,
+      "question": "Quel ministre gère les relations entre l'État et les institutions religieuses ?",
+      "reponse": "C'est le ministère du Culte, chargé par le ministre de l'Intérieur.",
+      "conseils": [
+        "Ministère du Culte",
+        "Sous responsabilité du ministre de l'Intérieur"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 188,
+      "question": "Qu'est-ce que la discrimination pour vous ?",
+      "reponse": "La discrimination, c'est par exemple de ne pas recruter quelqu'un à cause de son origine, de son appartenance à une ethnie, à une religion ou même de son sexe. Le seul critère d'embauche doit être la compétence.",
+      "conseils": [
+        "Traitement inégal basé sur origine, religion, sexe",
+        "Seule la compétence doit compter"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 189,
+      "question": "La discrimination est-elle légale en France ?",
+      "reponse": "Non, c'est un délit passible de graves sanctions judiciaires.",
+      "conseils": [
+        "Non, c'est illégal",
+        "Délit avec sanctions judiciaires"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 190,
+      "question": "En quelle année les citoyens français sont-ils devenus européens ?",
+      "reponse": "Les citoyens français sont européens depuis 1992.",
+      "conseils": [
+        "Année : 1992"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 191,
+      "question": "Qui a le droit d'accéder à l'emploi public ?",
+      "reponse": "Tous les citoyens ont le droit d'accéder aux emplois publics.",
+      "conseils": [
+        "Tous les citoyens"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 192,
+      "question": "En cas de conflit armé, qui pourra être appelé à défendre la patrie ?",
+      "reponse": "Tout citoyen de plus de 16 ans.",
+      "conseils": [
+        "Tout citoyen de plus de 16 ans"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 193,
+      "question": "Qu'est-ce que le système de sécurité sociale ?",
+      "reponse": "Le système de sécurité sociale se compose d'un ensemble d'institutions qui protègent les individus des conséquences de divers événements ou situations, qualifiés de risques sociaux.",
+      "conseils": [
+        "Protection contre risques sociaux",
+        "Ensemble d'institutions"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 194,
+      "question": "Par qui est-il financé ?",
+      "reponse": "Il est financé par les entreprises et les personnes qui travaillent (c'est une application de la fraternité).",
+      "conseils": [
+        "Financé par entreprises et travailleurs",
+        "Application de la fraternité"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 195,
+      "question": "Qui finance les services publics ?",
+      "reponse": "Ce sont les citoyens qui travaillent, via les impôts.",
+      "conseils": [
+        "Citoyens via les impôts"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 196,
+      "question": "Êtes-vous obligé de payer vos impôts ?",
+      "reponse": "Oui, payer ses impôts est obligatoire.",
+      "conseils": [
+        "Oui, c'est obligatoire"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 197,
+      "question": "Si vous obtenez la nationalité française, comptez-vous vivre en France ?",
+      "reponse": "Oui, la nationalité française est principalement obtenue pour vivre en France.",
+      "conseils": [
+        "Oui, pour vivre en France"
+      ],
+      "category": "attaches",
+      "difficulty": "facile"
+    },
+    {
+      "id": 198,
+      "question": "Les citoyens sont-ils toujours satisfaits des choix du gouvernement ?",
+      "reponse": "Non, les citoyens ne sont pas toujours d'accord avec les décisions du gouvernement.",
+      "conseils": [
+        "Non, pas toujours satisfaits"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 199,
+      "question": "Comment manifestent-ils leur désaccord ?",
+      "reponse": "En manifestant, en faisant grève, etc.",
+      "conseils": [
+        "Manifestations, grèves"
+      ],
+      "category": "institutions",
+      "difficulty": "facile"
+    },
+    {
+      "id": 200,
+      "question": "Citez des femmes politiques que vous connaissez ?",
+      "reponse": "Simone Veil, Agnès Buzyn, Ségolène Royal, etc.",
+      "conseils": [
+        "Exemples : Simone Veil, Agnès Buzyn, Ségolène Royal"
+      ],
+      "category": "culture",
+      "difficulty": "facile"
+    }
+  ]
+}

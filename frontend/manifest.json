@@ -1,0 +1,74 @@
+{
+  "name": "NaturalizeMe - Préparation Naturalisation Française",
+  "short_name": "NaturalizeMe",
+  "description": "Application de préparation aux 200 questions officielles de l'entretien de naturalisation française",
+  "version": "1.0.0",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#667eea",
+  "background_color": "#ffffff",
+  "lang": "fr",
+  "categories": ["education", "productivity", "lifestyle"],
+  "icons": [
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Nouveau Quiz",
+      "short_name": "Quiz",
+      "description": "Commencer un nouveau quiz de préparation",
+      "url": "/quiz",
+      "icons": [
+        {
+          "src": "/assets/images/shortcut-quiz.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Mes Statistiques", 
+      "short_name": "Stats",
+      "description": "Voir mes statistiques et progression",
+      "url": "/dashboard",
+      "icons": [
+        {
+          "src": "/assets/images/shortcut-stats.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Questions Favorites",
+      "short_name": "Favoris", 
+      "description": "Réviser mes questions favorites",
+      "url": "/favorites",
+      "icons": [
+        {
+          "src": "/assets/images/shortcut-favorites.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "protocol_handlers": [
+    {
+      "protocol": "web+naturalizeme",
+      "url": "/quiz?question=%s"
+    }
+  ],
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  }
+}
