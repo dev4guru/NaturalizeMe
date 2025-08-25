@@ -47,7 +47,7 @@ function loadQuestions() {
     
     console.log(`✅ ${allQuestions.length} questions chargées depuis le fichier`);
   } catch (error) {
-    console.error('❌ Erreur chargement questions:', error);
+    console.info('❌ Erreur chargement questions:', error);
     
     // Questions de fallback si le fichier ne peut pas être lu
     allQuestions = [
@@ -157,7 +157,7 @@ app.get('/api/questions', (req, res) => {
       total: filteredQuestions.length
     });
   } catch (error) {
-    console.error('Erreur récupération questions:', error);
+    console.info('Erreur récupération questions:', error);
     res.status(500).json({
       success: false,
       message: 'Erreur serveur'
@@ -196,7 +196,7 @@ app.get('/api/quiz/questions', (req, res) => {
       total: filteredQuestions.length
     });
   } catch (error) {
-    console.error('Erreur récupération questions quiz:', error);
+    console.info('Erreur récupération questions quiz:', error);
     res.status(500).json({
       success: false,
       message: 'Erreur serveur'
@@ -257,7 +257,7 @@ app.post('/api/quiz/start', (req, res) => {
       }
     });
   } catch (error) {
-    console.error('Erreur démarrage quiz:', error);
+    console.info('Erreur démarrage quiz:', error);
     res.status(500).json({
       success: false,
       message: 'Erreur lors du démarrage du quiz'
@@ -334,7 +334,7 @@ app.post('/api/quiz/answer', (req, res) => {
     });
     
   } catch (error) {
-    console.error('Erreur soumission réponse:', error);
+    console.info('Erreur soumission réponse:', error);
     res.status(500).json({
       success: false,
       message: 'Erreur lors de la soumission'
@@ -366,7 +366,7 @@ app.get('/api/quiz/session/:id', (req, res) => {
       }
     });
   } catch (error) {
-    console.error('Erreur récupération session:', error);
+    console.info('Erreur récupération session:', error);
     res.status(500).json({
       success: false,
       message: 'Erreur serveur'
@@ -402,7 +402,7 @@ app.get('/api/stats', (req, res) => {
       stats
     });
   } catch (error) {
-    console.error('Erreur statistiques:', error);
+    console.info('Erreur statistiques:', error);
     res.status(500).json({
       success: false,
       message: 'Erreur serveur'
@@ -430,7 +430,7 @@ app.post('/api/progress', (req, res) => {
       message: 'Progrès sauvegardés'
     });
   } catch (error) {
-    console.error('Erreur sauvegarde progrès:', error);
+    console.info('Erreur sauvegarde progrès:', error);
     res.status(500).json({
       success: false,
       message: 'Erreur serveur'
@@ -458,7 +458,7 @@ function updateQuestionStats(questionId, isCorrect) {
 
 // Middleware de gestion d'erreurs
 app.use((err, req, res, next) => {
-  console.error('Erreur serveur:', err);
+  console.info('Erreur serveur:', err);
   res.status(500).json({
     success: false,
     message: 'Erreur interne du serveur'

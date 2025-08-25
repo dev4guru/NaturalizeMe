@@ -48,12 +48,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Application Scripts -->
-    <script src="/js/app-fiches.js"></script>
-    
-    <!-- Alpine.js -->
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-red-50 font-inter" x-data="app">
     
@@ -83,7 +77,7 @@
                             class="transition-colors pb-1">
                         📋 Fiches
                     </button>
-                    <button @click="startPremiumQuiz()" 
+                    <button @click="startDemoQuiz()" 
                             :class="currentView === 'premiumQuiz' || currentView === 'quizResults' ? 'text-orange-600 border-b-2 border-orange-600' : 'text-gray-600 hover:text-orange-600'"
                             class="transition-colors pb-1 relative">
                         👑 Quiz Premium
@@ -94,11 +88,40 @@
                             <span class="absolute -top-1 -right-1 bg-green-500 text-white text-xs rounded-full w-2 h-2"></span>
                         </template>
                     </button>
-                    <button @click="goToProgress()" 
-                            :class="currentView === 'progress' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-blue-600'"
-                            class="transition-colors pb-1">
-                        📊 Progrès
-                    </button>
+                </div>
+                
+                <!-- Indicateur utilisateur -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <!-- Statut utilisateur -->
+                    <template x-if="!userProfile.isAuthenticated">
+                        <button @click="showAuthentication()" 
+                                class="flex items-center space-x-2 bg-blue-100 text-blue-700 px-3 py-1 rounded-lg hover:bg-blue-200 transition-colors">
+                            <span>🔐</span>
+                            <span class="text-sm font-medium">Se connecter</span>
+                        </button>
+                    </template>
+                    
+                    <template x-if="userProfile.isAuthenticated">
+                        <div class="flex items-center space-x-2">
+                            <!-- Nom utilisateur -->
+                            <div class="flex items-center space-x-2 bg-green-100 text-green-700 px-3 py-1 rounded-lg">
+                                <span>👋</span>
+                                <span class="text-sm font-medium" x-text="userProfile.name || 'Utilisateur'"></span>
+                            </div>
+                            <!-- Statut quiz -->
+                            <div class="flex items-center space-x-1">
+                                <template x-if="isPremium">
+                                    <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs font-medium">💎 Premium</span>
+                                </template>
+                            </div>
+                            <!-- Bouton déconnexion -->
+                            <button @click="logout()" 
+                                    class="text-gray-500 hover:text-red-600 transition-colors p-1"
+                                    title="Déconnexion">
+                                <span class="text-sm">🚪</span>
+                            </button>
+                        </div>
+                    </template>
                 </div>
                 
                 <!-- Mobile menu button -->
@@ -125,16 +148,11 @@
                             class="p-3 rounded-lg text-left transition-colors">
                         📋 Fiches
                     </button>
-                    <button @click="startPremiumQuiz(); mobileMenuOpen = false" 
+                    <button @click="startDemoQuiz(); mobileMenuOpen = false" 
                             :class="currentView === 'premiumQuiz' || currentView === 'quizResults' ? 'text-orange-600 bg-orange-50' : 'text-gray-600'"
                             class="p-3 rounded-lg text-left transition-colors relative">
                         👑 Quiz Premium
                         <span x-show="!isPremium" class="absolute top-1 right-3 bg-red-500 text-white text-xs rounded-full w-2 h-2"></span>
-                    </button>
-                    <button @click="goToProgress(); mobileMenuOpen = false" 
-                            :class="currentView === 'progress' ? 'text-blue-600 bg-blue-50' : 'text-gray-600'"
-                            class="p-3 rounded-lg text-left transition-colors">
-                        📊 Progrès
                     </button>
                 </div>
             </div>
@@ -163,10 +181,6 @@
                     <button @click="startStudying()" 
                             class="bg-gradient-to-r from-blue-600 to-red-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200">
                         📚 Commencer les révisions
-                    </button>
-                    <button @click="goToProgress()" 
-                            class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg hover:border-blue-500 hover:text-blue-600 transition-colors">
-                        📊 Voir mes progrès
                     </button>
                 </div>
             </section>
@@ -215,9 +229,9 @@
                                     </div>
                                     
                                     <template x-if="getQuizAccessStatus().canUse">
-                                        <button @click="startPremiumQuiz()" 
+                                        <button @click="startDemoQuiz()" 
                                                 class="bg-white text-orange-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors mr-4 transform hover:scale-105">
-                                            🎯 Essayer le Quiz Premium
+                                            🎯 Essayer le Quiz Démo
                                         </button>
                                     </template>
                                     
@@ -239,9 +253,9 @@
                                         <span class="text-green-600 text-sm block" x-text="getDaysRemaining() + ' jours restants'"></span>
                                     </div>
                                     
-                                    <button @click="startPremiumQuiz()" 
+                                    <button @click="startDemoQuiz()" 
                                             class="bg-white text-orange-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors transform hover:scale-105">
-                                        🎯 Commencer le Quiz Premium
+                                        🎯 Commencer le Quiz Démo
                                     </button>
                                 </div>
                             </template>
@@ -251,7 +265,7 @@
             </section>
 
             <!-- Statistiques -->
-            <section class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
                 <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 text-center border border-gray-200/50 shadow-sm">
                     <div class="text-3xl font-bold text-blue-600 mb-2" x-text="stats.totalQuestions"></div>
                     <p class="text-gray-600">Questions disponibles</p>
@@ -259,14 +273,6 @@
                 <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 text-center border border-gray-200/50 shadow-sm">
                     <div class="text-3xl font-bold text-green-600 mb-2" x-text="stats.categoriesCount"></div>
                     <p class="text-gray-600">Catégories</p>
-                </div>
-                <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 text-center border border-gray-200/50 shadow-sm">
-                    <div class="text-3xl font-bold text-purple-600 mb-2" x-text="userProgress.cardsViewed"></div>
-                    <p class="text-gray-600">Fiches vues</p>
-                </div>
-                <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 text-center border border-gray-200/50 shadow-sm">
-                    <div class="text-3xl font-bold text-orange-600 mb-2" x-text="userProgress.studiedToday"></div>
-                    <p class="text-gray-600">Sessions aujourd'hui</p>
                 </div>
             </section>
 
@@ -319,12 +325,6 @@
                 <div class="flex justify-between items-center">
                     <button @click="shuffleCards()" class="flex items-center space-x-2 text-gray-600 hover:text-gray-800 transition-colors">
                         🔀 <span>Mélanger</span>
-                    </button>
-                    <button @click="toggleFavorite()" 
-                            :class="isFavorite() ? 'text-red-500' : 'text-gray-400'"
-                            class="flex items-center space-x-2 hover:text-red-500 transition-colors">
-                        <span x-text="isFavorite() ? '❤️' : '🤍'"></span>
-                        <span x-text="isFavorite() ? 'Favori' : 'Ajouter aux favoris'"></span>
                     </button>
                 </div>
             </div>
@@ -406,50 +406,6 @@
             <div x-show="isLoading" class="text-center py-16">
                 <div class="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto"></div>
                 <p class="text-gray-500 mt-4">Chargement des fiches...</p>
-            </div>
-        </div>
-
-        <!-- Page des Progrès -->
-        <div x-show="currentView === 'progress'" x-transition class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div class="mb-8">
-                <button @click="goToHome()" class="flex items-center text-blue-600 hover:text-blue-700 transition-colors mb-4">
-                    ← Retour à l'accueil
-                </button>
-                <h2 class="text-3xl font-bold text-gray-900">Mes Progrès</h2>
-            </div>
-
-            <!-- Statistiques personnelles -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Fiches vues</h3>
-                    <p class="text-3xl font-bold text-blue-600" x-text="userProgress.cardsViewed"></p>
-                </div>
-                <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Sessions aujourd'hui</h3>
-                    <p class="text-3xl font-bold text-green-600" x-text="userProgress.studiedToday"></p>
-                </div>
-                <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Favoris</h3>
-                    <p class="text-3xl font-bold text-purple-600" x-text="userProgress.favoriteCards.length"></p>
-                </div>
-            </div>
-
-            <!-- Progression par catégorie -->
-            <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
-                <h3 class="text-lg font-semibold text-gray-900 mb-4">Répartition par catégorie</h3>
-                <div class="space-y-4">
-                    <template x-for="category in categories.filter(c => c.id !== 'all')" :key="category.id">
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center space-x-3">
-                                <span x-text="category.icon"></span>
-                                <span x-text="category.name"></span>
-                            </div>
-                            <div class="text-sm text-gray-600">
-                                <span x-text="category.count"></span> questions
-                            </div>
-                        </div>
-                    </template>
-                </div>
             </div>
         </div>
 
@@ -676,10 +632,6 @@
                                 class="w-full bg-gradient-to-r from-orange-600 to-red-600 text-white py-3 rounded-lg font-semibold transition-all">
                             🚀 Me notifier du lancement
                         </button>
-                        <button @click="activatePremium()" 
-                                class="w-full border-2 border-orange-500 text-orange-600 py-2 rounded-lg font-semibold hover:bg-orange-50 transition-colors text-sm">
-                            Activer le mode démo (gratuit)
-                        </button>
                         <button @click="showSubscription = false" 
                                 class="w-full border border-gray-300 text-gray-700 py-2 rounded-lg font-semibold hover:bg-gray-50 transition-colors text-sm">
                             Annuler
@@ -727,5 +679,179 @@
         </div>
     </footer>
 
+    <!-- === MODAL D'AUTHENTIFICATION === -->
+    <div x-show="showAuthModal" 
+         x-transition:enter="transition ease-out duration-300"
+         x-transition:enter-start="opacity-0"
+         x-transition:enter-end="opacity-100"
+         x-transition:leave="transition ease-in duration-200"
+         x-transition:leave-start="opacity-100"
+         x-transition:leave-end="opacity-0"
+         class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+         @click.self="closeAuthModal()">
+        
+        <div class="bg-white rounded-xl max-w-md w-full p-6 transform transition-all"
+             x-transition:enter="transition ease-out duration-300"
+             x-transition:enter-start="opacity-0 scale-95"
+             x-transition:enter-end="opacity-100 scale-100">
+            
+            <!-- Étape de bienvenue -->
+            <div x-show="authStep === 'welcome'">
+                <div class="text-center mb-6">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🔐</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900">Accès au Quiz</h3>
+                    <p class="text-gray-600 mt-2">Pour commencer votre préparation, créez un compte ou connectez-vous</p>
+                </div>
+                
+                <div class="space-y-3">
+                    <button @click="goToRegister()" 
+                            class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                        🆕 Créer un compte gratuit
+                    </button>
+                    <button @click="goToLogin()" 
+                            class="w-full border border-gray-300 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                        🔑 Se connecter
+                    </button>
+                    <button @click="closeAuthModal()" 
+                            class="w-full text-gray-500 py-2 text-sm hover:text-gray-700">
+                        Annuler
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Étape d'inscription -->
+            <div x-show="authStep === 'register'">
+                <div class="text-center mb-6">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">✨</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900">Créer votre compte</h3>
+                    <p class="text-gray-600 mt-2">Accès gratuit au quiz démo (30 questions)</p>
+                </div>
+                
+                <form @submit.prevent="createAccount()" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Votre nom</label>
+                        <input x-model="registerForm.name" 
+                               type="text" 
+                               placeholder="Prénom Nom"
+                               required
+                               class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input x-model="registerForm.email" 
+                               type="email" 
+                               placeholder="votre-email@exemple.com"
+                               required
+                               class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    
+                    <div class="flex items-start space-x-2">
+                        <input x-model="registerForm.agreeTerms" 
+                               type="checkbox" 
+                               id="agreeTerms"
+                               class="mt-1 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                        <label for="agreeTerms" class="text-xs text-gray-600">
+                            J'accepte les <a href="#" class="text-blue-600 hover:underline">conditions d'utilisation</a> 
+                            et la <a href="#" class="text-blue-600 hover:underline">politique de confidentialité</a>
+                        </label>
+                    </div>
+                    
+                    <div class="space-y-3 pt-2">
+                        <button type="submit" 
+                                class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                            ✅ Créer mon compte
+                        </button>
+                        <button type="button" @click="goToLogin()" 
+                                class="w-full text-blue-600 py-2 text-sm hover:text-blue-800">
+                            Déjà un compte ? Se connecter
+                        </button>
+                        <button type="button" @click="closeAuthModal()" 
+                                class="w-full text-gray-500 py-1 text-xs hover:text-gray-700">
+                            Retour
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Étape de connexion -->
+            <div x-show="authStep === 'login'">
+                <div class="text-center mb-6">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">👋</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900">Bon retour !</h3>
+                    <p class="text-gray-600 mt-2">Connectez-vous avec votre email</p>
+                </div>
+                
+                <form @submit.prevent="loginWithEmail()" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input x-model="loginForm.email" 
+                               type="email" 
+                               placeholder="votre-email@exemple.com"
+                               required
+                               class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    
+                    <div class="bg-blue-50 p-3 rounded-lg">
+                        <p class="text-xs text-blue-800">
+                            💡 <strong>Connexion simplifiée :</strong> Saisissez juste votre email, pas de mot de passe requis !
+                        </p>
+                    </div>
+                    
+                    <div class="space-y-3 pt-2">
+                        <button type="submit" 
+                                class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                            🔑 Se connecter
+                        </button>
+                        <button type="button" @click="goToRegister()" 
+                                class="w-full text-green-600 py-2 text-sm hover:text-green-800">
+                            Pas encore de compte ? S'inscrire
+                        </button>
+                        <button type="button" @click="closeAuthModal()" 
+                                class="w-full text-gray-500 py-1 text-xs hover:text-gray-700">
+                            Retour
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- === MODAL MESSAGE CENTRALISÉ === -->
+    <div x-show="showModal && modalMessage" x-cloak x-transition.opacity class="fixed inset-0 z-[100] flex items-center justify-center bg-black/30 backdrop-blur-sm">
+        <div :class="{
+                'bg-green-50 border-green-200 text-green-800': modalMessage?.type === 'success',
+                'bg-red-50 border-red-200 text-red-800': modalMessage?.type === 'error',
+                'bg-yellow-50 border-yellow-200 text-yellow-800': modalMessage?.type === 'warning',
+                'bg-blue-50 border-blue-200 text-blue-800': modalMessage?.type === 'info'
+            }"
+            class="p-6 rounded-xl border shadow-2xl max-w-md w-full relative flex flex-col items-center">
+            <div class="mb-2 text-3xl">
+                <span x-show="modalMessage?.type === 'success'">✅</span>
+                <span x-show="modalMessage?.type === 'error'">❌</span>
+                <span x-show="modalMessage?.type === 'warning'">⚠️</span>
+                <span x-show="modalMessage?.type === 'info'">ℹ️</span>
+            </div>
+            <div class="mb-4 w-full text-center">
+                <p class="text-base font-semibold whitespace-pre-line" x-text="modalMessage?.message"></p>
+            </div>
+            <button @click="closeModalMessage()" class="mt-2 px-4 py-2 rounded bg-blue-600 text-white font-bold shadow hover:bg-blue-700">Fermer</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script type="module" src="js/supabase-client.js"></script>
+    <script type="module" src="js/user-data-service.js"></script>
+    <script type="module" src="js/app-fiches.js"></script>
+    
+    <!-- Alpine.js - Load after modules -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </body>
 </html>
