@@ -1,8 +1,12 @@
+// === SUPABASE ===
+import { createClient } from '@supabase/supabase-js';
+const supabase = createClient('https://ton-instance.supabase.co', 'service_role_key'); // Remplace par tes vraies clés
 import express from 'express';
 import cors from 'cors';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import Stripe from 'stripe';
 
 // Configuration ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -10,10 +14,80 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+const stripe = Stripe('sk_test_...'); // Remplace par ta clé secrète Stripe
 
 // Middleware
 app.use(cors());
 app.use(express.json());
+app.use('/webhook', express.raw({type: 'application/json'})); // Pour Stripe webhook
+// Endpoint Stripe : création de session Checkout
+app.post('/create-checkout-session', async (req, res) => {
+  try {
+    const session = await stripe.checkout.sessions.create({
+      payment_method_types: ['card'],
+      line_items: [{
+        price_data: {
+          currency: 'eur',
+          product_data: {
+            name: 'Abonnement Premium 1 mois',
+          },
+          unit_amount: 0, // 0€ en centimes (paiement gratuit temporaire)
+        },
+        quantity: 1,
+      }],
+      mode: 'payment',
+      success_url: 'https://ton-site.fr/success?session_id={CHECKOUT_SESSION_ID}',
+      cancel_url: 'https://ton-site.fr/cancel',
+      metadata: {
+        user_id: req.body.user_id || 'demo',
+      },
+    });
+    res.json({ url: session.url });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Endpoint Stripe : webhook pour activer le premium
+app.post('/webhook', async (req, res) => {
+  const sig = req.headers['stripe-signature'];
+  let event;
+  try {
+    event = stripe.webhooks.constructEvent(req.body, sig, 'whsec_...'); // Remplace par ta clé webhook
+  } catch (err) {
+    return res.status(400).send(`Webhook Error: ${err.message}`);
+  }
+  if (event.type === 'checkout.session.completed') {
+    const session = event.data.object;
+    const userId = session.metadata.user_id;
+    const expiryDate = new Date();
+    expiryDate.setMonth(expiryDate.getMonth() + 1); // 1 mois premium
+
+    // Met à jour l'utilisateur dans Supabase
+    const { error } = await supabase
+      .from('users')
+      .update({
+        is_premium: true,
+        premium_expires_at: expiryDate.toISOString(),
+        updated_at: new Date().toISOString()
+      })
+      .eq('id', userId);
+    if (error) {
+      console.error('Erreur activation premium:', error);
+    } else {
+      console.log('✅ Premium activé pour', userId);
+    }
+    // Optionnel : reset le compteur de démo dans quiz_access
+    await supabase
+      .from('quiz_access')
+      .update({
+        demo_used_count: 0,
+        updated_at: new Date().toISOString()
+      })
+      .eq('user_id', userId);
+  }
+  res.json({received: true});
+});
 
 // Données en mémoire pour stocker les sessions utilisateur
 let userSessions = new Map();

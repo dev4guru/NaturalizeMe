@@ -479,15 +479,27 @@ document.addEventListener('alpine:init', () => {
                 this.showAuthentication();
                 return false;
             }
-            
+
+            // Vérification premium : accès illimité uniquement si abonnement actif
+            if (this.userProfile.isPremium) {
+                const now = new Date();
+                const expiry = this.userProfile.premiumExpiryDate ? new Date(this.userProfile.premiumExpiryDate) : null;
+                if (!expiry || now > expiry) {
+                    this.showWarning('Votre abonnement premium a expiré. Veuillez renouveler pour un accès illimité.');
+                    this.isPremium = false;
+                    return false;
+                }
+                // Premium actif : accès illimité
+                return true;
+            }
+
             // Si démo déjà utilisée et pas premium
-            if (this.quizAccess.totalDemoUsed >= this.quizAccess.maxDemoAllowed && !this.isPremium) {
-                console.log('❌ Démo déjà utilisée et pas premium');
+            if (this.quizAccess.totalDemoUsed >= this.quizAccess.maxDemoAllowed) {
                 this.showQuizUpgrade();
                 return false;
             }
-            
-            console.log('✅ Accès au quiz autorisé');
+
+            // Accès démo autorisé
             return true;
         },
         
@@ -1283,6 +1295,27 @@ document.addEventListener('alpine:init', () => {
             const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
             
             return Math.max(0, diffDays);
+        },
+
+        // Ouvrir Stripe Checkout pour l'abonnement premium
+        async subscribePremiumStripe() {
+            try {
+                // Récupère l'ID utilisateur (adapte selon ta logique)
+                const userId = this.userProfile.id || 'demo';
+                const response = await fetch('http://localhost:3001/create-checkout-session', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ user_id: userId })
+                });
+                const data = await response.json();
+                if (data.url) {
+                    window.location.href = data.url;
+                } else {
+                    this.showWarning('Erreur Stripe : impossible de démarrer le paiement.');
+                }
+            } catch (err) {
+                this.showWarning('Erreur Stripe : ' + err.message);
+            }
         }
     }));
 });

@@ -115,11 +115,14 @@
                                     <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs font-medium">💎 Premium</span>
                                 </template>
                             </div>
-                            <!-- Bouton déconnexion -->
+                            <!-- Bouton déconnexion professionnel -->
                             <button @click="logout()" 
-                                    class="text-gray-500 hover:text-red-600 transition-colors p-1"
+                                    class="flex items-center space-x-2 text-gray-500 hover:text-red-600 transition-colors px-3 py-1 rounded-lg border border-gray-200 hover:bg-red-50"
                                     title="Déconnexion">
-                                <span class="text-sm">🚪</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a2 2 0 01-2 2H7a2 2 0 01-2-2V7a2 2 0 012-2h6a2 2 0 012 2v1" />
+                                </svg>
+                                <span class="text-sm font-medium">Déconnexion</span>
                             </button>
                         </div>
                     </template>
@@ -589,14 +592,16 @@
             <div @click.away="showSubscription = false" 
                  class="bg-white rounded-2xl p-8 max-w-md w-full max-h-screen overflow-y-auto">
                 <div class="text-center">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">👑 Pré-inscription Premium</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">👑 Abonnement Premium</h3>
                     <div class="bg-gradient-to-r from-orange-500 to-red-500 text-white p-6 rounded-lg mb-6">
-                        <div class="text-3xl font-bold mb-2">9,99€</div>
+                        <div class="text-3xl font-bold mb-2">2,99€</div>
                         <div class="text-lg">par mois</div>
-                        <div class="text-sm mt-2 opacity-90">🎉 Tarif de lancement</div>
                     </div>
-                    
                     <div class="text-left space-y-3 mb-6">
+                        <div class="flex items-center">
+                            <span class="text-green-600 mr-2">✓</span>
+                            <span>Accès illimité au quiz premium pendant 1 mois à compter de la souscription</span>
+                        </div>
                         <div class="flex items-center">
                             <span class="text-green-600 mr-2">✓</span>
                             <span>Quiz chronométré de 30 questions</span>
@@ -628,11 +633,9 @@
                     </div>
                     
                     <div class="space-y-3">
-                        <button @click="submitPreRegistration()" 
-                                :disabled="!preRegisterEmail"
-                                :class="!preRegisterEmail ? 'opacity-50 cursor-not-allowed' : 'hover:shadow-lg'"
-                                class="w-full bg-gradient-to-r from-orange-600 to-red-600 text-white py-3 rounded-lg font-semibold transition-all">
-                            🚀 Me notifier du lancement
+                        <button @click="subscribePremiumStripe()"
+                                class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all">
+                            Souscrire maintenant
                         </button>
                         <button @click="showSubscription = false" 
                                 class="w-full border border-gray-300 text-gray-700 py-2 rounded-lg font-semibold hover:bg-gray-50 transition-colors text-sm">

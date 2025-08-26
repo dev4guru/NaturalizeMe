@@ -16,10 +16,19 @@
     "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
     "seed": "cd backend && npm run seed"
   },
-  "keywords": ["naturalisation", "quiz", "france", "citizenship", "education"],
+  "keywords": [
+    "naturalisation",
+    "quiz",
+    "france",
+    "citizenship",
+    "education"
+  ],
   "author": "NaturalizeMe Team",
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "stripe": "^18.4.0"
   }
 }
